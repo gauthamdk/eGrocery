@@ -1,0 +1,23 @@
+{
+  "name": "egrocery",
+  "version": "1.0.0",
+  "description": "project for software engineering Spring 2021",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gauthamdk/eGrocery.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gauthamdk/eGrocery/issues"
+  },
+  "homepage": "https://github.com/gauthamdk/eGrocery#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1"
+  }
+}

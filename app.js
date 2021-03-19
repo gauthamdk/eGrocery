@@ -8,7 +8,7 @@ let login = require('./routes/LogIn');
 let register = require('./routes/Register');
 let catalog = require('./routes/Catalog');
 let cart = require('./routes/Cart');
-let profile = require('./routes/Profile.js');
+let profile = require('./routes/Profile');
 
 
 let port = process.env.PORT || 3000;

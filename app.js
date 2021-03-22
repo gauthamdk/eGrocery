@@ -19,7 +19,7 @@ app.use('/css', express.static(__dirname + 'assets/css'))
 app.use('/imgs', express.static(__dirname + 'assets/imgs'))
 
 app.get("/", (req,res)=>{
-    res.render("login")
+    res.render("home")
 })
 
 app.use('/about', aboutus);

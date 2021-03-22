@@ -13,8 +13,13 @@ let profile = require('./routes/Profile.js');
 
 let port = process.env.PORT || 3000;
 
+//static files
+app.use(express.static('assets'))
+app.use('/css', express.static(__dirname + 'assets/css'))
+app.use('/imgs', express.static(__dirname + 'assets/imgs'))
+
 app.get("/", (req,res)=>{
-    res.render("home")
+    res.render("login")
 })
 
 app.use('/about', aboutus);

@@ -1,0 +1,9 @@
+body {
+  background-image: url("../imgs/market-background.jpg");
+}
+
+#background-elem {
+  background: #ffffff;
+  border-radius: 5px;
+  padding-bottom: 15px;
+}

@@ -1,0 +1,137 @@
+
+    body {
+    	font-family: helvetica;
+      height: 100%;
+      margin: 0;
+    }
+
+    * {
+       box-sizing: border-box;
+    }
+
+    .bg-image {
+      /* Full height */
+      height: 50%;
+
+      /* Center and scale the image nicely */
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+        }
+
+      /* Images used */
+      .img1 { background-image:  url("../imgs/strawberry.jpg") }
+      .img2 { background-image: url("../imgs/about.jpg"); }
+      .img3 { background-image: url("../imgs/catalog.jpg"); }
+
+
+    #background-elem {
+      background: #ffffff;
+      border-radius: 5px;
+      padding-bottom: 15px;
+    }
+
+
+    div.a {
+  font-size: 100px;
+  font-family: helvetica;
+  font-weight: bold;
+  color: white;
+}
+
+div.b {
+font-size: 30px;
+font-family: helvetica;
+font-weight: bold;
+color: #FFD327;
+}
+
+div.c {
+font-size: 100px;
+font-family: helvetica;
+font-weight: bold;
+color: #FFD327;
+padding-left: 10px;
+}
+
+div.d {
+font-size: 60px;
+font-family: helvetica;
+font-weight: bold;
+color:#99E265;
+padding-left: 10px;
+}
+
+div.c1 {
+font-size: 15px;
+font-family: helvetica;
+font-weight: bold;
+padding-left: 20px;
+}
+
+div.c2 {
+font-size: 15px;
+font-family: helvetica;
+font-weight: bold;
+text-align: center;
+}
+
+.bt {
+display: block;
+width: 20%;
+border-radius: 25px;
+font-family: helvetica;
+font-weight: bold;
+background-color:#FFD327;
+color: white;
+font-size: 20px;
+}
+
+.bt2 {
+  display: block;
+  width: 20%;
+border-radius: 25px;
+font-family: helvetica;
+font-weight: bold;
+background-color:#99E265;
+color: white;
+font-size: 20px;
+}
+
+.bt3 {
+display: block;
+width: 100%;
+border-radius: 25px;
+font-family: helvetica;
+font-weight: bold;
+background-color:#5C66B2;
+color: white;
+font-size: 40px;
+
+}
+
+
+
+
+
+div.pd{
+
+  padding-top: 500px;
+   padding-bottom: 50px;
+   padding-left: 100px;
+}
+
+div.pd1{
+
+  padding-top: 300px;
+   padding-left: 30px;
+   align-content: center;
+}
+
+div.pd2{
+
+  padding-top: 600px;
+   padding-left: 30px;
+   align-content: center;
+}

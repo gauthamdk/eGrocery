@@ -12,7 +12,11 @@ p {
 }
 
 .btn {
-	background: rgb(153, 226, 101);
+	background: rgb(255, 211, 39);
+}
+
+.btn:hover {
+	background: #e0a800;
 }
 
 .round-img {
@@ -38,6 +42,10 @@ p {
 	/*color: rgb(103, 106, 130);*/
 	text-align: center;
 	/*display: inline;*/
+}
+
+.jumbotron {
+	background: rgb(181 182 189);
 }
 
 #nav {

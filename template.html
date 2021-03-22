@@ -10,7 +10,7 @@
 </head>
 <body>
 	<!-- Navbar -->
-	<nav id="nav" class="navbar navbar-expand-lg navbar-dark fixed-top">
+	<nav id="nav" class="navbar navbar-expand-md navbar-dark fixed-top">
 		<div class="container">
 			<!-- Logo and link to main page -->
 			<a class="navbar-brand" href="index.html">
@@ -45,7 +45,7 @@
 				</ul>
 				<form class="d-flex">
 					<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-					<button class="btn btn-outline-success" type="submit">Search</button>
+					<button class="btn" type="submit">Search</button>
 				</form>
 			</div>
 		</div>
@@ -75,8 +75,8 @@
 		<section class="container my-5">
 			<hr class="heading">This is a card collection</h3>
 			
-			<div class="row justify-content-center">
-				<div class="card col-3" style="width: 18rem;">
+			<div class="row">
+				<div class="card col-lg-3 col-sm-6">
 					<img src="assets/imgs/hide-the-pain-harold-stock-photo.jpg" class="card-img-top" alt="...">
 					<div class="card-body">
 						<h5 class="card-title">Card title</h5>
@@ -84,7 +84,7 @@
 						<a href="#" class="btn">Add to Cart</a>
 					</div>
 				</div>
-				<div class="card col-3" style="width: 18rem;">
+				<div class="card col-lg-3 col-sm-6">
 					<img src="assets/imgs/hide-the-pain-harold-stock-photo.jpg" class="card-img-top" alt="...">
 					<div class="card-body">
 						<h5 class="card-title">Card title</h5>
@@ -92,7 +92,7 @@
 						<a href="#" class="btn">Add to Cart</a>
 					</div>
 				</div>
-				<div class="card col-3" style="width: 18rem;">
+				<div class="card col-lg-3 col-sm-6">
 					<img src="assets/imgs/hide-the-pain-harold-stock-photo.jpg" class="card-img-top" alt="...">
 					<div class="card-body">
 						<h5 class="card-title">Card title</h5>
@@ -100,7 +100,7 @@
 						<a href="#" class="btn">Add to Cart</a>
 					</div>
 				</div>
-				<div class="card col-3" style="width: 18rem;">
+				<div class="card col-lg-3 col-sm-6">
 					<img src="assets/imgs/hide-the-pain-harold-stock-photo.jpg" class="card-img-top" alt="...">
 					<div class="card-body">
 						<h5 class="card-title">Card title</h5>
@@ -114,33 +114,32 @@
 
 		<!-- selects -->
 		<scetion class="container my-5">
-			<div class="row">
-				<hr class="heading">This is a select</h3>
-
-				<div class="form-check">
-					<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-					<label class="form-check-label" for="flexCheckDefault">
-						Default checkbox
-					</label>
+			<h3 class="heading">This is a select</h3>
+				<div class="container jumbotron selects">
+					<div class="form-check pl-5">
+						<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+						<label class="form-check-label" for="flexCheckDefault">
+							Default checkbox
+						</label>
+					</div>
+					<div class="form-check pl-5">
+						<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+						<label class="form-check-label" for="flexCheckChecked">
+						Checked checkbox
+						</label>
+					</div> 
 				</div>
-				<div class="form-check">
-					<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-					<label class="form-check-label" for="flexCheckChecked">
-					Checked checkbox
-					</label>
-				</div>
-			</div>
-		</scetion>
+			</scetion>
 
 
 		<!-- Collapse -->
 		<section class="container my-5">
 			<hr class="heading">This is a collapse</h3>
 			<p>
-				<a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+				<a class="btn" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
 					Link with href
 				</a>
-				<button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+				<button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
 					Button with data-bs-target
 				</button>
 			</p>

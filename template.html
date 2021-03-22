@@ -73,7 +73,7 @@
 
 		<!-- cards grid -->
 		<section class="container my-5">
-			<hr class="heading">This is a card collection</h3>
+			<h3 class="heading">This is a card collection</h3>
 			
 			<div class="row">
 				<div class="card col-lg-3 col-sm-6">
@@ -113,7 +113,7 @@
 
 
 		<!-- selects -->
-		<scetion class="container my-5">
+		<!-- <scetion class="container my-5">
 			<h3 class="heading">This is a select</h3>
 				<div class="container jumbotron selects">
 					<div class="form-check pl-5">
@@ -129,33 +129,62 @@
 						</label>
 					</div> 
 				</div>
-			</scetion>
+			</scetion> -->
 
 
 		<!-- Collapse -->
 		<section class="container my-5">
-			<hr class="heading">This is a collapse</h3>
-			<p>
-				<a class="btn" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-					Link with href
-				</a>
-				<button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-					Button with data-bs-target
-				</button>
-			</p>
-			<div class="collapse" id="collapseExample">
-				<div class="row">
-					<div class="form-check">
-						<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-						<label class="form-check-label" for="flexCheckDefault">
-							Default checkbox
-						</label>
-					</div>
-					<div class="form-check">
-						<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-						<label class="form-check-label" for="flexCheckChecked">
-						Checked checkbox
-						</label>
+			<div class="row">
+				<!-- Sections and categories -->
+				<div class="col-sm-3">
+					<div class="jumbotron">
+						<h3 class="heading">This is a collapse</h3>
+							<button class="btn section" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+								Section
+							</button>
+						<div class="collapse" id="collapseExample">
+							<div class="form-check">
+								<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+								<label class="form-check-label" for="flexCheckDefault">
+									Default checkbox
+								</label>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+								<label class="form-check-label" for="flexCheckChecked">
+								Checked checkbox
+								</label>
+							</div>
+						</div>
+					</div>	
+				</div>
+				<!-- cards -->
+				<div class="col-sm-9">
+					<div class="row">
+						<div class="card col-lg-4 col-sm-6">
+							<img src="assets/imgs/hide-the-pain-harold-stock-photo.jpg" class="card-img-top" alt="...">
+							<div class="card-body">
+								<h5 class="card-title">Card title</h5>
+								<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+								<a href="#" class="btn">Add to Cart</a>
+							</div>
+						</div>
+						<div class="card col-lg-4 col-sm-6">
+							<img src="assets/imgs/hide-the-pain-harold-stock-photo.jpg" class="card-img-top" alt="...">
+							<div class="card-body">
+								<h5 class="card-title">Card title</h5>
+								<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+								<a href="#" class="btn">Add to Cart</a>
+							</div>
+						</div>
+						<div class="card col-lg-4 col-sm-6">
+							<img src="assets/imgs/hide-the-pain-harold-stock-photo.jpg" class="card-img-top" alt="...">
+							<div class="card-body">
+								<h5 class="card-title">Card title</h5>
+								<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+								<a href="#" class="btn">Add to Cart</a>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -178,9 +207,9 @@
 						<input type="checkbox" class="form-check-input" id="exampleCheck1">
 						<label class="form-check-label" for="exampleCheck1">Keep me logged in</label>
 					</div>
-					<button type="submit" class="btn btn-primary">Submit</button>
-					<hr>New to eGrocery</p>
-					<button type="button" class="btn btn-primary">Create an Account</button>
+					<button type="submit" class="btn">Submit</button>
+					<p>New to eGrocery</p>
+					<button type="button" class="btn">Create an Account</button>
 				</form>
 			</div>
 
@@ -211,7 +240,7 @@
 						<input type="password" class="form-control" id="exampleInputPassword1">
 					</div>
 					
-					<button type="submit" class="btn btn-primary">Create Account</button>
+					<button type="submit" class="btn">Create Account</button>
 				</form>
 			</div>
 
@@ -290,7 +319,7 @@
 						</div>
 
 						<div class="col-12">
-							<button class="btn btn-primary" type="submit">Submit form</button>
+							<button class="btn" type="submit">Submit form</button>
 						</div>
 					</form>
 				</div>

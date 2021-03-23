@@ -6,4 +6,16 @@ body {
   background: #ffffff;
   border-radius: 5px;
   padding-bottom: 15px;
+  width: 500px;
+}
+
+#background {
+  background: #ffffff;
+}
+
+#HelpBlock {
+  font-size: 10px;
+}
+#haveacc {
+  margin: 0;
 }

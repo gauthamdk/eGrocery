@@ -1,10 +1,10 @@
 let express = require('express');
 let router = express.Router();
-// const connectEnsureLogin = require("connect-ensure-login");
+const connectEnsureLogin = require("connect-ensure-login");
 
-router.get('/', (req,res)=>{
-    // connectEnsureLogin.ensureLoggedIn(),
-    res.send("Catalog");
-})
+router.get('/', connectEnsureLogin.ensureLoggedIn(),
+  (req, res) => {
+        res.send("Catalog");
+    })
 
 module.exports = router;

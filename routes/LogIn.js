@@ -15,7 +15,7 @@ router.post('/', (req, res, next) => {
       }
   
       if (!user) {
-        return res.redirect('/login?info=' + info);
+        return res.redirect('/catalog');
       }
   
       req.logIn(user, function(err) {

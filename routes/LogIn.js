@@ -1,6 +1,5 @@
 const express = require('express');
 const router = express.Router();
-const connectEnsureLogin = require('connect-ensure-login');
 const passport = require('passport');
 
 router.get('/', (req, res) => {
@@ -15,7 +14,7 @@ router.post('/', (req, res, next) => {
       }
 
       if (!user) {
-        req.flash('info', 'Wrong username or password');
+        req.flash('error', 'Wrong username or password');
         return res.redirect('/login');
       }
 

@@ -15,7 +15,8 @@ router.post('/', (req, res, next) => {
       }
 
       if (!user) {
-        return res.redirect('/');
+        req.flash('info', 'Wrong username or password');
+        return res.redirect('/login');
       }
 
       req.logIn(user, function (err) {

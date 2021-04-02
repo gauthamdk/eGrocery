@@ -1,5 +1,7 @@
-let express = require('express');
-let app = express();
+let express = require('express'),
+    app = express();
+
+let UserDetails = require('./models/User');
 
 app.use(express.static(__dirname));
 app.set('view engine', 'ejs');
@@ -27,17 +29,8 @@ app.use(passport.session());
 const mongoose = require('mongoose');
 const passportLocalMongoose = require('passport-local-mongoose');
 
-mongoose.connect('mongodb://localhost/userAuth',
+mongoose.connect('mongodb://localhost/egrocery',
   { useNewUrlParser: true, useUnifiedTopology: true });
-
-const Schema = mongoose.Schema;
-const UserDetail = new Schema({
-  username: String,
-  password: String
-});
-
-UserDetail.plugin(passportLocalMongoose);
-const UserDetails = mongoose.model('userInfo', UserDetail);
 
 /* PASSPORT LOCAL AUTHENTICATION */
 

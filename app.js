@@ -1,19 +1,39 @@
-let express = require('express');
-let app = express();
+let express = require('express'),
+    flash = require('connect-flash'),
+    cookieParser = require('cookie-parser'),
+    connectEnsureLogin = require("connect-ensure-login");
+
+const app = express();
+
+// MODELS
+let UserDetails = require('./models/User');
+
+// ROUTES
+let aboutus = require('./routes/AboutUs');
+let login = require('./routes/LogIn');
+let register = require('./routes/Register');
+let catalog = require('./routes/Catalog');
+let cart = require('./routes/Cart');
+let profile = require('./routes/Profile');
 
 app.use(express.static(__dirname));
 app.set('view engine', 'ejs');
 
-const bodyParser = require('body-parser');
 const expressSession = require('express-session')({
   secret: 'justanythingrandom4r8934niurw8jADFD',
   resave: false,
-  saveUninitialized: false
+  saveUninitialized: false,
+  cookie: {maxAge: 60000}
 });
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 app.use(expressSession);
+
+/* USING FLASH */
+
+app.use(cookieParser('keyboard cat'));
+app.use(flash());
 
 /*  PASSPORT SETUP  */
 
@@ -27,42 +47,16 @@ app.use(passport.session());
 const mongoose = require('mongoose');
 const passportLocalMongoose = require('passport-local-mongoose');
 
-mongoose.connect('mongodb://localhost/userAuth',
+mongoose.connect('mongodb://localhost/egrocery',
   { useNewUrlParser: true, useUnifiedTopology: true });
-
-const Schema = mongoose.Schema;
-const UserDetail = new Schema({
-  username: String,
-  password: String
-});
-
-UserDetail.plugin(passportLocalMongoose);
-const UserDetails = mongoose.model('userInfo', UserDetail);
 
 /* PASSPORT LOCAL AUTHENTICATION */
 
 passport.use(UserDetails.createStrategy());
-
 passport.serializeUser(UserDetails.serializeUser());
 passport.deserializeUser(UserDetails.deserializeUser());
 
-const connectEnsureLogin = require("connect-ensure-login")
-
-/* REGISTER SOME USERS */
-
-// UserDetails.register({username:'paul', active: false}, 'paul');
-// UserDetails.register({username:'jay', active: false}, 'jay');
-// UserDetails.register({username:'roy', active: false}, 'roy');
-
-//routes required
-let aboutus = require('./routes/AboutUs');
-let login = require('./routes/LogIn');
-let register = require('./routes/Register');
-let catalog = require('./routes/Catalog');
-let cart = require('./routes/Cart');
-let profile = require('./routes/Profile');
-
-
+// PORTS
 let port = process.env.PORT || 3000;
 
 //static files

@@ -11,20 +11,12 @@
    <section class="container pt-3 mt-5 mb-5" id="background-elem">
     <div class="m-5">
             <h3 class="my-3">Sign Up</h3>
-            <form class="row g-3 " >
-                <div class="col-md-6">
+            <form class="row g-3" method="post" action="/register">
+                <div class="col-md-12">
                     <label for="" class="form-label">
-                        First name
+                        Name
                     </label>
-                    <input type="text" class="form-control" id="" required>
-                    <div class="valid-feedback">
-                        Looks good!
-                    </div>
-                </div>
-    
-                <div class="col-md-6">
-                    <label for="" class="form-label">Last name</label>
-                    <input type="text" class="form-control" id="" required>
+                    <input type="text" class="form-control" name="name" required>
                     <div class="valid-feedback">
                         Looks good!
                     </div>
@@ -34,30 +26,30 @@
                     <label for="validationCustom01" class="form-label">
                         Username
                     </label>
-                    <input type="text" class="form-control" id="exampleInputName1" required>
+                    <input type="text" class="form-control" name="username" required>
                 </div>
     
                 <div class="col-md-12">
                     <label for="exampleInputEmail1" class="form-label">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <input type="email" class="form-control" name="email" aria-describedby="emailHelp">
                     <div id="HelpBlock" class="form-text">We'll never share your email with anyone else.</div>
                 </div>
 
                 <div class="col-md-12">
                     <label for="inputPassword5" class="form-label">Password</label>
-                    <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
+                    <input type="password" name="password" class="form-control" aria-describedby="passwordHelpBlock">
                     <div id="HelpBlock" class="form-text">
                         Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special
                         characters, or emoji.
                     </div>
-                </div>
+                <!-- </div>
                 <div class="col-md-12">
                     <label for="exampleInputPassword1" class="form-label">Confirm Password</label>
                     <input type="password" class="form-control" id="exampleInputPassword1">
                 </div>
-    
+     -->
                 <div class="col-12">
-                    <div class="form-check">
+                    <div class="form-check mt-3">
                         <input class="form-check-input" type="checkbox" value="" id="" required>
                         <label class="form-check-label" for="">
                             Agree to terms and conditions
@@ -67,9 +59,9 @@
                         </div>
                     </div>
                 </div>
-                <button type="submit" class="btn btn-primary">SignUp</button>
+                <button type="submit" class="btn btn-primary mt-3">SignUp</button>
                 <hr><p id='haveacc'>Already have an account?</p>
-                <button type="button" class="btn btn-primary col-3" onclick="window.location.href='/login'">
+                <button type="button" class="btn btn-primary col-3 mt-2" onclick="window.location.href='/login'">
                     Sign in
                 </button>
             </form>

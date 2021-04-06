@@ -1,14 +1,85 @@
+<!-- 
+ TO DO:
+ 1. Link Navbar links
+  a.
+ 2. Link learn more
+ 3. Link login and register
+ -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link rel="stylesheet" type="text/css" href="css/home.css">
+
+<!-- Bootstrap CDN -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+<!-- Bootstrap icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
+
+<link rel="stylesheet" type="text/css" href="css/styles.css">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 </head>
 
 <body>
+  <!-- Navbar -->
+  <nav id="nav" class="navbar navbar-expand-md navbar-light fixed-top">
+    <div class="container">
+      <!-- Logo and link to main page -->
+      <a class="navbar-brand" onclick="window.location.href='/'">
+        <!-- <img id="logo" src="assets/eGroceryLogo.png"> -->
+        eGrocery
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+              <a class="nav-link active" aria-current="page" onclick="window.location.href='/'">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" onclick="window.location.href='/catalog'">Catalog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" onclick="window.location.href='/about'">About Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-<div class="bg-image img1">
+  <!-- Header section -->
+  <div class="container-fluid" id="bg-img-strw">
+    <div class="container d-flex flex-column justify-content-end full-height pb-5">  
+      <h1 class="title display-1 txt-white">eGrocery</h1>
+      <h3 class="txt-yellow caps mb-4"><strong>groceries made easy</strong></h3> 
+
+      <!-- registe / log in -->
+      <a href="#" class="btn btn-y register-btn mb-3">Register <i class="bi bi-person-plus"></i></a>
+      <a href="#" class="btn btn-g register-btn">Login <i class="bi bi-person-plus-fill"></i></a>
+    </div>
+  </div>
+
+  <!-- About us mini section -->
+  <div class="row no-margin align-items-between">
+    <div class="col-6">  
+      <h1 class="display-1 text-centered txt-green caps mb-5 pt-3">About Us</h1>
+      <h3 class="txt-yellow text-centered mb-3"><strong>Who we are</strong></h3>
+      <!-- text content -->
+      <div class="row justify-content-center">  
+        <p class="col-md-8"><strong>We are a Saadiyat based grocery store ready to deliver fresh groceries and delicious snacks.</strong></p>
+      </div>
+
+      <!-- button to about -->
+      <div class="d-flex justify-content-center align-items-center">
+        <a href="#" class="btn btn-g" id="learn-more">Learn More <i class="bi bi-three-dots"></i></a>
+      </div>
+    </div>
+    <img src="../assets/imgs/about2.jpg" class="col-6 no-margin">
+  </div>
+  
+  <!-- 
+  <div class="bg-image img1">
 <div class="pd">
 
 
@@ -45,6 +116,7 @@
 
   <div class="pd2">l</div>
 </div>
+   -->
 
 </body>
 </html>

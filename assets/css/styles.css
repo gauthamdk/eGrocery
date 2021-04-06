@@ -2,31 +2,42 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
+    font-family: helvetica;
 }
 
 body {
-	font-family: helvetica;
-	background-image: url(../imgs/market-background.jpg);
-	/*background-repeat: no-repeat;*/
-	background-attachment: fixed;
 	/*color: white;*/
 	padding-bottom: 25px;
 }
 
 p {
 	padding: 0 20px;
+	font-size: 20px;
 }
 
 .text-centered {
 	text-align: center;
 }
 
-.btn {
+/* default button is yellow */
+.btn-y {
 	background: rgb(255, 211, 39);
 }
 
-.btn:hover {
+.btn-y:hover {
 	background: #e0a800;
+}
+
+.btn-g {
+	background: rgb(138, 235, 70);
+}
+
+.btn-g:hover {
+	background: rgb(69 142 18);
+}
+
+.register-btn {
+	width: 220px;
 }
 
 .round-img {
@@ -42,18 +53,19 @@ p {
 	padding: 10px 0;
 }
 
-.heading {
-	/*color: rgb(103, 106, 130);*/
-	text-align: center;
-	/*display: inline;*/
-}
-
-.heading-green {
+.txt-green {
 	color: rgb(153, 226, 101);
 }
 
-.heading-yellow {
+.txt-yellow {
 	color: rgb(255, 211, 39);
+}
+
+.txt-white {
+	color: white;
+}
+.caps {
+	text-transform: uppercase;
 }
 
 .jumbotron {
@@ -81,12 +93,48 @@ p {
 	padding-right: 0;
 }
 
+.full-height {
+	height: 100%;
+}
+
+.title {
+	font-size: 7em;
+	font-weight: bold;
+}
+
+.invisible {
+	opacity: 0;
+}
+
+#learn-more {
+	font-size: 25px;
+	margin: 20% auto;
+}
+
 #nav {
-	background: rgb(103, 106, 130);
+	background: rgb(109 187 54);
 }
 
 #logo {
 	max-width: 100px;
+}
+
+#bg-img-market {
+	background-image: url(../imgs/market-background.jpg);
+	/*background-repeat: no-repeat;*/
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+#bg-img-strw {
+	height: 100vh;
+	background-image: url("../imgs/strawberry.jpg");
+	/* Center and scale the image nicely */
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 #background-elem {

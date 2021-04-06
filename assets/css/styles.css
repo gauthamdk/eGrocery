@@ -1,169 +1,174 @@
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    font-family: helvetica;
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: helvetica;
 }
 
 body {
-	/*color: white;*/
-	padding-bottom: 25px;
+  /*color: white;*/
+  padding-bottom: 25px;
 }
 
 p {
-	padding: 0 20px;
-	font-size: 20px;
+  padding: 0 20px;
+  font-size: 20px;
+}
+
+a:hover {
+  cursor: pointer;
 }
 
 .text-centered {
-	text-align: center;
+  text-align: center;
 }
 
 /* default button is yellow */
 .btn-y {
-	background: rgb(255, 211, 39);
+  background: rgb(255, 211, 39);
 }
 
 .btn-y:hover {
-	background: #e0a800;
+  background: #e0a800;
 }
 
 .btn-g {
-	background: rgb(138, 235, 70);
+  background: rgb(138, 235, 70);
 }
 
 .btn-g:hover {
-	background: rgb(69 142 18);
+  background: rgb(69 142 18);
 }
 
 .btn-b {
-	background: rgb(78, 93, 201);
-	color: white;
+  background: rgb(78, 93, 201);
+  color: white;
 }
 
 .btn-b:hover {
-	background: rgb(27 41 146);
-	color: white;
+  background: rgb(27 41 146);
+  color: white;
 }
 
 .register-btn {
-	width: 220px;
+  width: 220px;
 }
 
 .round-img {
-	border-radius: 50%;
-	max-width: 400px;
-	max-height: 400px;
+  border-radius: 50%;
+  max-width: 400px;
+  max-height: 400px;
 }
 
 .header-div {
-	/*width: 30%;*/
-	/*min-width: 400px;*/
-	margin: 0 auto;
-	padding: 10px 0;
+  /*width: 30%;*/
+  /*min-width: 400px;*/
+  margin: 0 auto;
+  padding: 10px 0;
 }
 
 .txt-green {
-	color: rgb(153, 226, 101);
+  color: rgb(153, 226, 101);
 }
 
 .txt-yellow {
-	color: rgb(255, 211, 39);
+  color: rgb(255, 211, 39);
 }
 
 .txt-white {
-	color: white;
+  color: white;
 }
 
 .txt-blue {
-	color: rgb(78, 93, 201);
+  color: rgb(78, 93, 201);
 }
 
 .caps {
-	text-transform: uppercase;
+  text-transform: uppercase;
 }
 
 .jumbotron {
-	background: rgb(181 182 189);
-	margin: 10px;
-	padding: 5px;
-	height: 100%;
+  background: rgb(181 182 189);
+  margin: 10px;
+  padding: 5px;
+  height: 100%;
 }
 
 .section {
-	margin-bottom: 10px;
-	background: rgb(92, 102, 178);
+  margin-bottom: 10px;
+  background: rgb(92, 102, 178);
 }
 
 .section:hover {
-	background: rgb(63 68 101);
-	color: white;
+  background: rgb(63 68 101);
+  color: white;
 }
 
 .no-margin {
-	/*width: 100%;*/
-	margin-left: 0;
-	margin-right: 0;
-	padding-left: 0;
-	padding-right: 0;
+  /*width: 100%;*/
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .full-height {
-	height: 100%;
+  height: 100%;
 }
 
 .title {
-	font-size: 7em;
-	font-weight: bold;
+  font-size: 7em;
+  font-weight: bold;
 }
 
 .invisible {
-	opacity: 0;
+  opacity: 0;
 }
 
 #to-catalog {
-	padding: 15px;
-	font-size: 20px;
+  padding: 15px;
+  font-size: 20px;
 }
 
 #learn-more {
-	font-size: 25px;
-	margin: 20% auto;
+  font-size: 25px;
+  margin: 20% auto;
 }
 
 #nav {
-	background: rgb(153, 226, 101);
+  background: rgb(153, 226, 101);
 }
 
 #logo {
-	max-width: 100px;
+  max-width: 100px;
 }
 
 #bg-img-market {
-	background-image: url(../imgs/market-background.jpg);
-	/*background-repeat: no-repeat;*/
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-attachment: fixed;
+  background-image: url(../imgs/market-background.jpg);
+  /*background-repeat: no-repeat;*/
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 #bg-img-strw {
-	height: 100vh;
-	background-image: url("../imgs/strawberry.jpg");
-	/* Center and scale the image nicely */
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
+  height: 100vh;
+  background-image: url("../imgs/strawberry.jpg");
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #background-elem {
-	background: #ffffff;
-	/*border-radius: 5%*/
-	padding-bottom: 15px;
+  background: #ffffff;
+  /*border-radius: 5%*/
+  padding-bottom: 15px;
 }
 
 #map {
-      width: 100%;
-      height: 500px;
+  width: 100%;
+  height: 500px;
 }

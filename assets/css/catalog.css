@@ -75,8 +75,13 @@ p {
   display: block;
 }
 
-#nav {
-  background: rgb(75, 211, 47);
+a:hover {
+  cursor: pointer;
+}
+
+.navbar {
+  background: rgb(153, 226, 101);
+  height: 7vh;
 }
 
 #logo {

@@ -55,12 +55,12 @@
         <!-- login / register side -->
         <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
           <li class="nav-item">
-              <a class="nav-link" aria-current="page" onclick="">
+              <a class="nav-link" aria-current="page" onclick="window.location.href='/register'">
                 Register <i class="bi bi-person-plus"></i>
               </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" onclick="">
+            <a class="nav-link" onclick="window.location.href='/login'">
               Login <i class="bi bi-person-plus-fill"></i>
             </a>
           </li>
@@ -76,8 +76,8 @@
       <h3 class="txt-yellow caps mb-4"><strong>groceries made easy</strong></h3> 
 
       <!-- registe / log in -->
-      <a href="#" class="btn btn-y register-btn mb-3">Register <i class="bi bi-person-plus"></i></a>
-      <a href="#" class="btn btn-g register-btn">Login <i class="bi bi-person-plus-fill"></i></a>
+      <a href="#" class="btn btn-y register-btn mb-3" onclick="window.location.href='/register'">Register <i class="bi bi-person-plus"></i></a>
+      <a href="#" class="btn btn-g register-btn" onclick="window.location.href='/login'">Login <i class="bi bi-person-plus-fill"></i></a>
     </div>
   </div>
 
@@ -123,7 +123,7 @@
 
     <!-- come shop with us -->
     <div class="container d-flex justify-content-end">  
-      <a href="#" id="to-catalog" class="btn btn-b mt-3 mb-5 ml-5"><strong>View our entire catalog</strong> <i class="bi bi-basket2"></i></a>
+      <a href="#" id="to-catalog" class="btn btn-b mt-3 mb-5 ml-5" onclick="window.location.href='/catalog'"><strong>View our entire catalog</strong> <i class="bi bi-basket2"></i></a>
     </div>
 
 

@@ -1,39 +1,41 @@
+body {
+  font-family: helvetica;
+  height: 100%;
+  margin: 0;
+}
 
-    body {
-    	font-family: helvetica;
-      height: 100%;
-      margin: 0;
-    }
+* {
+  box-sizing: border-box;
+}
 
-    * {
-       box-sizing: border-box;
-    }
+.bg-image {
+  /* Full height */
+  height: 50%;
 
-    .bg-image {
-      /* Full height */
-      height: 50%;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
-      /* Center and scale the image nicely */
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
+/* Images used */
+.img1 {
+  background-image: url("../imgs/strawberry.jpg");
+}
+.img2 {
+  background-image: url("../imgs/about.jpg");
+}
+.img3 {
+  background-image: url("../imgs/catalog.jpg");
+}
 
-        }
+#background-elem {
+  background: #ffffff;
+  border-radius: 5px;
+  padding-bottom: 15px;
+}
 
-      /* Images used */
-      .img1 { background-image:  url("../imgs/strawberry.jpg") }
-      .img2 { background-image: url("../imgs/about.jpg"); }
-      .img3 { background-image: url("../imgs/catalog.jpg"); }
-
-
-    #background-elem {
-      background: #ffffff;
-      border-radius: 5px;
-      padding-bottom: 15px;
-    }
-
-
-    div.a {
+div.a {
   font-size: 100px;
   font-family: helvetica;
   font-weight: bold;
@@ -41,99 +43,91 @@
 }
 
 div.b {
-font-size: 30px;
-font-family: helvetica;
-font-weight: bold;
-color: #FFD327;
+  font-size: 30px;
+  font-family: helvetica;
+  font-weight: bold;
+  color: #ffd327;
 }
 
 div.c {
-font-size: 100px;
-font-family: helvetica;
-font-weight: bold;
-color: #FFD327;
-padding-left: 10px;
+  font-size: 100px;
+  font-family: helvetica;
+  font-weight: bold;
+  color: #ffd327;
+  padding-left: 10px;
 }
 
 div.d {
-font-size: 60px;
-font-family: helvetica;
-font-weight: bold;
-color:#99E265;
-padding-left: 10px;
+  font-size: 60px;
+  font-family: helvetica;
+  font-weight: bold;
+  color: #99e265;
+  padding-left: 10px;
 }
 
 div.c1 {
-font-size: 15px;
-font-family: helvetica;
-font-weight: bold;
-padding-left: 20px;
+  font-size: 15px;
+  font-family: helvetica;
+  font-weight: bold;
+  padding-left: 20px;
 }
 
 div.c2 {
-font-size: 15px;
-font-family: helvetica;
-font-weight: bold;
-text-align: center;
+  font-size: 15px;
+  font-family: helvetica;
+  font-weight: bold;
+  text-align: center;
 }
 
 .bt {
-display: block;
-width: 20%;
-border-radius: 25px;
-font-family: helvetica;
-font-weight: bold;
-background-color:#FFD327;
-color: white;
-font-size: 20px;
-cursor: pointer;
+  display: block;
+  width: 20%;
+  border-radius: 25px;
+  font-family: helvetica;
+  font-weight: bold;
+  background-color: #ffd327;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
 }
 
 .bt2 {
   display: block;
   width: 20%;
-border-radius: 25px;
-font-family: helvetica;
-font-weight: bold;
-background-color:#99E265;
-color: white;
-font-size: 20px;
-cursor: pointer;
+  border-radius: 25px;
+  font-family: helvetica;
+  font-weight: bold;
+  background-color: #99e265;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
 }
 
 .bt3 {
-display: block;
-width: 100%;
-border-radius: 25px;
-font-family: helvetica;
-font-weight: bold;
-background-color:#5C66B2;
-color: white;
-font-size: 40px;
-
+  display: block;
+  width: 100%;
+  border-radius: 25px;
+  font-family: helvetica;
+  font-weight: bold;
+  background-color: #5c66b2;
+  color: white;
+  font-size: 40px;
 }
 
-
-
-
-
-div.pd{
-
+div.pd {
   padding-top: 500px;
-   padding-bottom: 50px;
-   padding-left: 100px;
+  padding-bottom: 50px;
+  padding-left: 100px;
 }
 
-div.pd1{
-
+div.pd1 {
   padding-top: 300px;
-   padding-left: 30px;
-   align-content: center;
+  padding-left: 30px;
+  align-content: center;
 }
 
-div.pd2{
-
+div.pd2 {
   padding-top: 600px;
-   padding-left: 30px;
-   align-content: center;
+  padding-left: 30px;
+  align-content: center;
 }

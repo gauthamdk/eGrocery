@@ -115,19 +115,21 @@
         <section class="container my-5">
             <h3>Products</h3>
 
-            <% products.forEach(product => { %>
                 
-                <div class="row">
+        <div class="row">
+
+            <% products.forEach(product => { %>
+
                 <div class="card col-lg-3 col-sm-6 mb-1">
-                    <img src="<%= product.image_url%>" class="card-img-top" alt="...">
+                    <img src="<%= product.image_url%>" class="card-img-top">
                     <div class="card-body">
                         <h5 class="card-title"><%= product.name%></h5>
                         <a href="#" class="btn">Add to Cart</a>
                     </div>
                 </div>
-                </div>
-            <% }); %> 
-      
+    <% }); %> 
+    </div>
+
         </section>
     
     </section>

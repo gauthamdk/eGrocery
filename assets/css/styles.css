@@ -36,6 +36,16 @@ p {
 	background: rgb(69 142 18);
 }
 
+.btn-b {
+	background: rgb(78, 93, 201);
+	color: white;
+}
+
+.btn-b:hover {
+	background: rgb(27 41 146);
+	color: white;
+}
+
 .register-btn {
 	width: 220px;
 }
@@ -64,6 +74,11 @@ p {
 .txt-white {
 	color: white;
 }
+
+.txt-blue {
+	color: rgb(78, 93, 201);
+}
+
 .caps {
 	text-transform: uppercase;
 }
@@ -106,13 +121,18 @@ p {
 	opacity: 0;
 }
 
+#to-catalog {
+	padding: 15px;
+	font-size: 20px;
+}
+
 #learn-more {
 	font-size: 25px;
 	margin: 20% auto;
 }
 
 #nav {
-	background: rgb(109 187 54);
+	background: rgb(153, 226, 101);
 }
 
 #logo {

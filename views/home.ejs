@@ -1,9 +1,16 @@
 <!-- 
  TO DO:
  1. Link Navbar links
-  a.
+  a. logo link back to home page (done)
+  b. catalog (done)
+  c. about (done)
+  d. login/register (NEED TO DO)
  2. Link learn more
  3. Link login and register
+ 4. Replace login/register with user profile when logged in
+ 5. For the categories section, each cards should link to the catalog already filtering for that category alone 
+    For example clicking dairy should take to catalog showing only dairy
+ 6. Link to entire catalog
  -->
 
 <!DOCTYPE html>
@@ -26,13 +33,13 @@
     <div class="container">
       <!-- Logo and link to main page -->
       <a class="navbar-brand" onclick="window.location.href='/'">
-        <!-- <img id="logo" src="assets/eGroceryLogo.png"> -->
+        <!-- <img id="logo" src="assets/imgs/navbarLogo.png"> -->
         eGrocery
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div class="collapse navbar-collapse align-items-between" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
               <a class="nav-link active" aria-current="page" onclick="window.location.href='/'">Home</a>
@@ -42,6 +49,20 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" onclick="window.location.href='/about'">About Us</a>
+          </li>
+        </ul>
+
+        <!-- login / register side -->
+        <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+              <a class="nav-link" aria-current="page" onclick="">
+                Register <i class="bi bi-person-plus"></i>
+              </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" onclick="">
+              Login <i class="bi bi-person-plus-fill"></i>
+            </a>
           </li>
         </ul>
       </div>
@@ -60,10 +81,58 @@
     </div>
   </div>
 
+
+  <!-- Catalog section -->
+  <section class="container-fluid px-2">
+    <!-- title -->
+    <h2 class="display-2 text-centered txt-blue mb-5 pt-3"><strong>Come Shop with Us!</strong></h2>
+    
+    <!-- cards -->
+    <div class="row">
+      <div class="card col-lg-3 col-sm-6 mb-1">
+        <img src="https://wallpaperaccess.com/full/3471160.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Breakfast & Cereal</h5>
+          <a href="#" class="btn btn-y shopcat">Shop</a>
+        </div>
+      </div>
+      <div class="card col-lg-3 col-sm-6 mb-1">
+        <img src="../assets/categories/bread.jpeg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Bread & Bakery</h5>
+          <a href="#" class="btn btn-y shopcat">Shop</a>
+        </div>
+      </div>
+      <div class="card col-lg-3 col-sm-6 mb-1">
+        <img src="../assets/categories/egg.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Diary, Eggs & Cheese</h5>
+
+          <a href="#" class="btn btn-y shopcat">Shop</a>
+        </div>
+      </div>
+      <div class="card col-lg-3 col-sm-6 mb-1">
+        <img src="https://i.pinimg.com/originals/31/7b/72/317b72fe0ebc551d0cad86e3f2ce6495.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Fruits & Vegetables</h5>
+
+          <a href="#" class="btn btn-y shopcat">Shop</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- come shop with us -->
+    <div class="container d-flex justify-content-end">  
+      <a href="#" id="to-catalog" class="btn btn-b mt-3 mb-5 ml-5"><strong>View our entire catalog</strong> <i class="bi bi-basket2"></i></a>
+    </div>
+
+
+  </section>
+
   <!-- About us mini section -->
   <div class="row no-margin align-items-between">
     <div class="col-6">  
-      <h1 class="display-1 text-centered txt-green caps mb-5 pt-3">About Us</h1>
+      <h2 class="display-2 text-centered txt-green caps mb-5 pt-3">About Us</h2>
       <h3 class="txt-yellow text-centered mb-3"><strong>Who we are</strong></h3>
       <!-- text content -->
       <div class="row justify-content-center">  
@@ -77,46 +146,8 @@
     </div>
     <img src="../assets/imgs/about2.jpg" class="col-6 no-margin">
   </div>
-  
-  <!-- 
-  <div class="bg-image img1">
-<div class="pd">
 
 
-          <div class="a">eGrocery</div>
-          <div class="b">GROCERIES MADE EASY</div>
-          <br>
-                <button type="button" class="bt" onclick="window.location.href='/register'"> REGISTER →</button>
-                <br>
-                <br>
-                <button type="button" class="bt2" onclick="window.location.href='/login'">LOGIN →</button>
-</div>
-</div>
-
-<div class="bg-image img2">
-  <div class="d">About Us</div>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <div class="c">who we are</div>
-  <div class="c1">We are a Saadiyat based grocery store that has been <br>  serving up fresh groceries and delicious snacks.<br>"Lorem ipsum dolor sit amet, consectetur adipiscing elit,<br> sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br> Ut enim ad minim veniam, quis nostrud exercitation ullamco <br> laboris nisi ut aliquip ex ea commodo consequat. <br>Duis aute irure dolor in reprehenderit <br> in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <br>Excepteur sint occaecat cupidatat non proident, <br>sunt in culpa qui officia deserunt mollit anim id est laborum."</div>
-  <div class="pd1">
-                <button type="button" class="bt2" onclick="window.location.href='/about'">Learn more</button>
-</div>
-</div>
-
-<div class="bg-image img3">
-
-  <button type="button" class="bt3" onclick="window.location.href='/catalog'">View Our Grocery Catalog →</button>
-  <br>
-
-  <div class="c2">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum <br> deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati <br> cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</div>
-
-  <div class="pd2">l</div>
-</div>
-   -->
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -57,18 +57,36 @@ passport.use(UserDetails.createStrategy());
 passport.serializeUser(UserDetails.serializeUser());
 passport.deserializeUser(UserDetails.deserializeUser());
 
-data = {    name: 'Orange',
+data = [
+  {
+    
+  name: 'Orange',
+  price: 5,
   details: "lorum ipsum",
   stock: 5,
   category: 'Fruits & Vegetables',
   image_url: 'https://images.unsplash.com/photo-1613747495731-3add0988073a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'
+  }, 
+  {
+  name: 'Apple',
+  price: 3,
+  details: "lorum ipsum",
+  stock: 10,
+  category: 'Fruits & Vegetables',
+  image_url: 'https://images.unsplash.com/photo-1600626333392-59a20e646d97?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'
 }
+]
 
-// Products.create(data, (err, product) =>{
-//   if (err){
-//     console.log(err)
-//   }
-// })
+// data.forEach( (product) =>{
+//   Products.create(product, (err, product) =>{
+//     if (err){
+//       console.log(err)
+//     }
+//   })
+// }
+// )
+
+
 
 // PORTS
 let port = process.env.PORT || 3000;

@@ -1,0 +1,112 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: helvetica;
+  background-image: url(../imgs/market-background.jpg);
+  /*background-repeat: no-repeat;*/
+  background-attachment: fixed;
+  /*color: white;*/
+  padding-bottom: 25px;
+}
+
+p {
+  padding: 0 20px;
+}
+
+.text-centered {
+  text-align: center;
+}
+
+.btn {
+  background: rgb(255, 211, 39);
+}
+
+.btn:hover {
+  background: #e0a800;
+}
+
+.round-img {
+  border-radius: 50%;
+  max-width: 400px;
+  max-height: 400px;
+}
+
+.header-div {
+  /*width: 30%;*/
+  /*min-width: 400px;*/
+  margin: 0 auto;
+  padding: 10px 0;
+}
+
+.heading {
+  /*color: rgb(103, 106, 130);*/
+  text-align: center;
+  /*display: inline;*/
+}
+
+.section {
+  margin-bottom: 10px;
+  background: rgb(92, 102, 178);
+}
+
+.section:hover {
+  background: rgb(63 68 101);
+  color: white;
+}
+
+.no-margin {
+  /*width: 100%;*/
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.card_text {
+  font-size: 5px;
+}
+
+.shopcat {
+  display: block;
+}
+
+#nav {
+  background: rgb(103, 106, 130);
+}
+
+#logo {
+  max-width: 100px;
+}
+
+#background-elem {
+  background: #ffffff;
+  /*border-radius: 5%*/
+  padding-bottom: 15px;
+}
+
+#map {
+  width: 100%;
+  height: 500px;
+}
+
+#account_heading {
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+#profile_icon {
+  font-size: 2rem;
+}
+#navbarSupportedContent {
+  position: relative;
+}
+
+#search {
+  margin: auto;
+}

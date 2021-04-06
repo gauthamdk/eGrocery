@@ -1,10 +1,19 @@
 let express = require('express');
 let router = express.Router();
-const connectEnsureLogin = require("connect-ensure-login");
+let Products = require('../models/Product');
 
-router.get('/', 
-  (req, res) => {
-        res.render('catalog');
-    })
+router.get('/', (req, res) => {
+
+  Products.find({}, (err, allProducts) =>{
+    if (err){
+      console.log(err)
+    }
+
+    else{
+      res.render('catalog', {products: allProducts})
+    }
+  })
+}
+)
 
 module.exports = router;

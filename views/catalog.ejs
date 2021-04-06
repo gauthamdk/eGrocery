@@ -114,69 +114,20 @@
         <!-- cards grid -->
         <section class="container my-5">
             <h3>Products</h3>
-            <div class="row">
-                <div class="card col-lg-3 col-sm-6 mb-1">
-                    <img src="https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/article_thumbnails/slideshows/health_benefits_of_apples_slideshow/1800x1200_health_benefits_of_apples_slideshow.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Fresh Apples</h5>
-                        <a href="#" class="btn">Add to Cart</a>
-                    </div>
-                </div>
-                <div class="card col-lg-3 col-sm-6 mb-1">
-                    <img src="../assets/categories/tomatoes.jpeg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Fresh tomatoes</h5>
-                        <a href="#" class="btn">Add to Cart</a>
-                    </div>
-                </div>
-                <div class="card col-lg-3 col-sm-6 mb-1">
-                    <img src="https://www.e-fresco.io/pub/media/catalog/product/1/5/1519672422-carrots.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Carrots</h5>
-                        <a href="#" class="btn">Add to Cart</a>
-                    </div>
-                </div>
-                <div class="card col-lg-3 col-sm-6 mb-1">
-                    <img src="https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/article_thumbnails/slideshows/benefits_of_cabbage_slideshow/1800x1200_benefits_of_cabbage_slideshow.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Fresh cabbage</h5>
-                        <a href="#" class="btn">Add to Cart</a>
-                    </div>
-                </div>
-                <div class="card col-lg-3 col-sm-6 mb-1">
-                    <img src="http://gfb.global.ssl.fastly.net/wp-content/uploads/2016/09/Mung-beans.jpg"
-                        class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Beans</h5>
-                        <a href="#" class="btn">Add to Cart</a>
-                    </div>
-                </div>
-                <div class="card col-lg-3 col-sm-6 mb-1">
-                    <img src="https://static.wixstatic.com/media/d85f50_bac83b26c81c49e3a02ec9b40acd8ca4~mv2_d_1800_1200_s_2.jpg"
-                        class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Pineapple</h5>
-                        <a href="#" class="btn">Add to Cart</a>
-                    </div>
-                </div>
-                <div class="card col-lg-3 col-sm-6 mb-1">
-                    <img src="https://static.onecms.io/wp-content/uploads/sites/38/2013/10/12232144/shutterstock_188146451.jpg"
-                        class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Soymilk</h5>
-                        <a href="#" class="btn">Add to Cart</a>
-                    </div>
-                </div>
-                <div class="card col-lg-3 col-sm-6 mb-1">
-                    <img src="https://wolfgangpuck.com/wp-content/uploads/2016/08/Coffee1.jpg"
-                        class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Coffee</h5>
 
+            <% products.forEach(product => { %>
+                
+                <div class="row">
+                <div class="card col-lg-3 col-sm-6 mb-1">
+                    <img src="<%= product.image_url%>" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title"><%= product.name%></h5>
                         <a href="#" class="btn">Add to Cart</a>
                     </div>
                 </div>
-            </div>
+                </div>
+            <% }); %> 
+      
         </section>
     
     </section>

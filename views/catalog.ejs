@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Welcome to eGrocery</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/catalog.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav id="nav" class="navbar navbar-expand-md navbar-dark fixed-top">
+        <div class="container">
+            <!-- Logo and link to main page -->
+            <a class="navbar-brand" href="home">
+                <img id="logo" src="assets/eGroceryLogo.png" width='30px' height= '30px'>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <form class="d-flex" id='search'>
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn" type="submit">Search</button>
+                </form>
+
+                <ul id='dropdown' class="navbar-nav  mb-1 "> 
+                    <li class="nav-item dropdown mt-3">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Categories
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Category1</a></li>
+                            <li><a class="dropdown-item" href="#">Category2</a></li>
+                            <li><a class="dropdown-item" href="#">Category3</a></li>
+                            <li><a class="dropdown-item" href="#">Category3</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <i id='profile_icon' class="bi bi-person-circle"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                            <p id='account_heading'>Your Account</p>
+                            <li><a class="dropdown-item" href="#">Profile</a></li>
+                            <li><a class="dropdown-item" href="#">Orders</a></li>
+                            <li><a class="dropdown-item" href="#">Wishlist</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+
+                            <li><a class="dropdown-item" href="#">Sign Out</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                
+            </div>
+        </div>
+    </nav>
+    
+    <section class="container pt-5 mt-5 mb-4" id="background-elem">
+        <!-- CATEGORIES -->
+        <section class="container my-5">
+            <h3>Categories</h3>
+            <div class="row">
+                <div class="card col-lg-3 col-sm-6 mb-1">
+                    <img src="https://wallpaperaccess.com/full/3471160.jpg" 
+                    class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Breakfast & Cereal</h5>
+                        <a href="#" class="btn shopcat">Shop</a>
+                    </div>
+                </div>
+                <div class="card col-lg-3 col-sm-6 mb-1">
+                    <img src="https://lh3.googleusercontent.com/proxy/84CbPHzS6BHXImbwvCIrcu2QzioqCJHOXv69zS4jSNke-BN7uJUcn6TOhrbiT4CsQ7dHo0XCs--ife6NzQ1xXBI4xTvDXMxuOUdBv6EOeK4xONUGX_ILY4iXlIsrZfqVRs4" 
+                    class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Bread & Bakery</h5>
+                        
+                        <a href="#" class="btn shopcat">Shop</a>
+                    </div>
+                </div>
+                <div class="card col-lg-3 col-sm-6 mb-1">
+                    <img src="https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/article_thumbnails/slideshows/whats_a_ketogenic_diet_slideshow/1800x1200_whats_a_ketogenic_diet_slideshow.jpg" 
+                    class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Diary, Eggs & Cheese</h5>
+                        
+                        <a href="#" class="btn shopcat">Shop</a>
+                    </div>
+                </div>
+                <div class="card col-lg-3 col-sm-6 mb-1">
+                    <img src="https://i.pinimg.com/originals/31/7b/72/317b72fe0ebc551d0cad86e3f2ce6495.jpg" 
+                    class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Fruits & Vegetables</h5>
+                        
+                        <a href="#" class="btn shopcat">Shop</a>
+                    </div>
+                </div>
+            </div>
+
+        
+        </section>
+    
+    
+        <!-- cards grid -->
+        <section class="container my-5">
+            <div class="row">
+                <div class="card col-lg-3 col-sm-6 mb-1">
+                    <img src="https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/article_thumbnails/slideshows/health_benefits_of_apples_slideshow/1800x1200_health_benefits_of_apples_slideshow.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Fresh Apples</h5>
+                        <a href="#" class="btn">Add to Cart</a>
+                    </div>
+                </div>
+                <div class="card col-lg-3 col-sm-6 mb-1">
+                    <img src="https://lh3.googleusercontent.com/proxy/qXZllWmVZnuFXm68Xi_5sO9kwKfwlpdvVZpZnGvjaV6XJYVbMH-seJvOnpdo9bebpMzp-MbM_Zoti-8BAzjxOQBEK-7WpXYzu7bW-qDOZthTUxyQMJIZYDc" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Fresh tomatoes</h5>
+                        <a href="#" class="btn">Add to Cart</a>
+                    </div>
+                </div>
+                <div class="card col-lg-3 col-sm-6 mb-1">
+                    <img src="https://www.e-fresco.io/pub/media/catalog/product/1/5/1519672422-carrots.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Carrots</h5>
+                        <a href="#" class="btn">Add to Cart</a>
+                    </div>
+                </div>
+                <div class="card col-lg-3 col-sm-6 mb-1">
+                    <img src="https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/article_thumbnails/slideshows/benefits_of_cabbage_slideshow/1800x1200_benefits_of_cabbage_slideshow.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Fresh cabbage</h5>
+                        <a href="#" class="btn">Add to Cart</a>
+                    </div>
+                </div>
+                <div class="card col-lg-3 col-sm-6 mb-1">
+                    <img src="http://gfb.global.ssl.fastly.net/wp-content/uploads/2016/09/Mung-beans.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Beans</h5>
+                        <a href="#" class="btn">Add to Cart</a>
+                    </div>
+                </div>
+                <div class="card col-lg-3 col-sm-6 mb-1">
+                    <img src="https://static.wixstatic.com/media/d85f50_bac83b26c81c49e3a02ec9b40acd8ca4~mv2_d_1800_1200_s_2.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Pineapple</h5>
+                        <a href="#" class="btn">Add to Cart</a>
+                    </div>
+                </div>
+                <div class="card col-lg-3 col-sm-6 mb-1">
+                    <img src="https://static.onecms.io/wp-content/uploads/sites/38/2013/10/12232144/shutterstock_188146451.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Soymilk</h5>
+                        <a href="#" class="btn">Add to Cart</a>
+                    </div>
+                </div>
+                <div class="card col-lg-3 col-sm-6 mb-1">
+                    <img src="https://wolfgangpuck.com/wp-content/uploads/2016/08/Coffee1.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Coffee</h5>
+
+                        <a href="#" class="btn">Add to Cart</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+    </section>
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+</body>
+</html>

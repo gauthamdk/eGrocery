@@ -1,70 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Welcome to eGrocery</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="css/catalog.css">
-</head>
-<body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-md navbar-light fixed-top">
-        <div class="container">
-            <!-- Logo and link to main page -->
-            <a class="navbar-brand" onclick="window.location.href='/'">
-                eGrocery
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <form class="d-flex" id='search'>
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn" type="submit">Search</button>
-                </form>
-
-                <ul id='dropdown' class="navbar-nav  mb-1 "> 
-                    <li class="nav-item dropdown mt-3">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Categories
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Breakfast and Cereal</a></li>
-                            <li><a class="dropdown-item" href="#">Bread and Bakery</a></li>
-                            <li><a class="dropdown-item" href="#">Dairy, Egg and Cheese</a></li>
-                            <li><a class="dropdown-item" href="#">Fruits and Vegetables</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            <i id='profile_icon' class="bi bi-person-circle"></i>
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                            <p id='account_heading'>Your Account</p>
-                            <li><a class="dropdown-item" href="#">Profile</a></li>
-                            <li><a class="dropdown-item" href="#">Orders</a></li>
-                            <li><a class="dropdown-item" href="#">Cart</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-
-                            <li><a class="dropdown-item" href="#">Sign Out</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                
-            </div>
-        </div>
-    </nav>
     
+<%- include('./partials/header.ejs') %>
+
     <section class="container pt-5 mt-5 mb-4" id="background-elem">
         <!-- CATEGORIES -->
         <section class="container my-5">
@@ -75,7 +11,7 @@
                     class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Breakfast & Cereal</h5>
-                        <a href="#" class="btn shopcat">Shop</a>
+                        <a href="/catalog/Breakfast & Cereal" class="btn shopcat">Shop</a>
                     </div>
                 </div>
                 <div class="card col-lg-3 col-sm-6 mb-1">
@@ -84,7 +20,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Bread & Bakery</h5>
                         
-                        <a href="#" class="btn shopcat">Shop</a>
+                        <a href="/catalog/Bread & Bakery" class="btn shopcat">Shop</a>
                     </div>
                 </div>
                 <div class="card col-lg-3 col-sm-6 mb-1">
@@ -93,7 +29,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Diary, Eggs & Cheese</h5>
                         
-                        <a href="#" class="btn shopcat">Shop</a>
+                        <a href="/catalog/Diary, Eggs & Cheese" class="btn shopcat">Shop</a>
                     </div>
                 </div>
                 <div class="card col-lg-3 col-sm-6 mb-1">
@@ -102,7 +38,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Fruits & Vegetables</h5>
                         
-                        <a href="#" class="btn shopcat">Shop</a>
+                        <a href="/catalog/Fruits & Vegetables" class="btn shopcat">Shop</a>
                     </div>
                 </div>
             </div>
@@ -134,9 +70,5 @@
     
     </section>
     
+<%- include('./partials/footer.ejs') %>
     
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
-        crossorigin="anonymous"></script>
-</body>
-</html>

@@ -146,6 +146,7 @@ a:hover {
 	padding: 15px;
 	font-size: 20px;
 	background-color: #121212;
+	color: #ffffff;
 }
 
 #learn-more {
@@ -160,7 +161,7 @@ a:hover {
 }
 
 #logo {
-	max-width: 100px;
+	max-width: 50px;
 }
 
 #bg-img-market {

@@ -1,0 +1,51 @@
+<%- include("./partials/header") %> 
+
+<section class="container mt-5" id="background-elem">
+
+    <!-- subsection (about us, etc)  -->
+    <section class="container no-margin py-5">
+
+      <!-- button to go back -->
+      <div class="container ml-5">  
+        <a href="#" class="btn btn-b right"><i class="bi bi-arrow-left"></i> Back to Catalog</a>  
+      </div>
+
+      <div class="row no-margin align-items-center justify-content-around">
+        <img src="../assets/imgs/hide-the-pain-harold-stock-photo.jpg" class="col-6 no-margin">
+        <div class="col-5">  
+          <!-- Product name -->
+          <h4 class="mt-4">Product #5</h4>
+
+          <ul>
+            <!-- Product details -->
+            <li class="list"><strong>Buy this, it's good for you. Please, we are about to go broke</strong></li>
+            <li class="list"><strong>Amount available:</strong> 420</li>
+            <li class="list"><strong>Price:</strong> $ 69.00</li>
+            <li class="list">
+              <form>
+                <div class="form-group row">
+                  <label for="qtyInput" class="col-sm-2 col-form-label">Quantity: </label>
+                  <div class="col-sm-3">
+                    <a href="" class="btn btn-y"><i class="bi bi-dash"></i></a>
+                    <input type="number" class="form-control" id="qtyInput" placeholder="1">
+                    <a href="" class="btn btn-y"><i class="bi bi-plus"></i></a>
+                  </div>
+                </div>
+              </form>
+            </li>
+          </ul>
+          <a href="#" class="btn btn-y shopcat"><i class="bi bi-cart-plus"></i> Add to cart!</a>
+        </div>
+      </div>
+
+    </section>
+    
+  </section>
+
+  <script type="text/javascript">
+    document.getElementById("catalog").classList.add("active");
+    document.getElementsByTagName("body")[0].id = "bg-img-market";
+  </script>
+  <script type="text/javascript" async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDxu_A7z9KvwfUMK3J9xUuLdhgU_8PCMPE&callback=initMap"></script>
+
+<%- include("./partials/footer") %> 

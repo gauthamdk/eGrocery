@@ -16,6 +16,7 @@ let register = require("./routes/Register");
 let catalog = require("./routes/Catalog");
 let cart = require("./routes/Cart");
 let profile = require("./routes/Profile");
+let product = require("./routes/Product");
 
 app.use(express.static(__dirname));
 app.set("view engine", "ejs");
@@ -87,6 +88,7 @@ app.use("/register", register);
 app.use("/catalog", catalog);
 app.use("/cart", cart);
 app.use("/profile", profile);
+app.use("/catalog/product", product);
 
 app.listen(port, () => {
 	console.log(`App running on port ${port}`);

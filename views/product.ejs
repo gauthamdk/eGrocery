@@ -7,28 +7,26 @@
 
       <!-- button to go back -->
       <div class="container ml-5">  
-        <a href="#" class="btn btn-b right"><i class="bi bi-arrow-left"></i> Back to Catalog</a>  
+        <a href="/catalog" class="btn btn-b right"><i class="bi bi-arrow-left"></i> Back to Catalog</a>  
       </div>
 
       <div class="row no-margin align-items-center justify-content-around">
-        <img src="../assets/imgs/hide-the-pain-harold-stock-photo.jpg" class="col-6 no-margin">
+        <img src="<%= product.image_url %> " class="col-6 no-margin">
         <div class="col-5">  
           <!-- Product name -->
-          <h4 class="mt-4">Product #5</h4>
+          <h4 class="mt-4"><%= product.name%></h4>
 
           <ul>
             <!-- Product details -->
-            <li class="list"><strong>Buy this, it's good for you. Please, we are about to go broke</strong></li>
-            <li class="list"><strong>Amount available:</strong> 420</li>
-            <li class="list"><strong>Price:</strong> $ 69.00</li>
+            <li class="list"><strong><%= product.details %> </strong></li>
+            <li class="list"><strong>Amount available: </strong><%= product.stock %> </li>
+            <li class="list"><strong>Price:</strong> AED <%= product.price %> </li>
             <li class="list">
               <form>
                 <div class="form-group row">
                   <label for="qtyInput" class="col-sm-2 col-form-label">Quantity: </label>
                   <div class="col-sm-3">
-                    <a href="" class="btn btn-y"><i class="bi bi-dash"></i></a>
-                    <input type="number" class="form-control" id="qtyInput" placeholder="1">
-                    <a href="" class="btn btn-y"><i class="bi bi-plus"></i></a>
+                    <input type="number" class="form-control" id="qtyInput" placeholder="1" min='0'>
                   </div>
                 </div>
               </form>

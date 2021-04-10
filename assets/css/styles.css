@@ -143,8 +143,8 @@ a:hover {
 }
 
 .list {
-  font-size: 15px;
-  margin-top: 20px;
+	font-size: 15px;
+	margin-top: 20px;
 }
 
 #to-catalog {
@@ -196,4 +196,11 @@ a:hover {
 #map {
 	width: 100%;
 	height: 500px;
+}
+
+.product-img {
+	display: block;
+	max-height: 300px;
+	width: auto;
+	height: auto;
 }

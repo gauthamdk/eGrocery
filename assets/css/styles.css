@@ -204,3 +204,7 @@ a:hover {
 	width: auto;
 	height: auto;
 }
+
+#profile_icon {
+	font-size: 1.8 rem;
+}

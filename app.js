@@ -12,6 +12,7 @@ let Products = require("./models/Product");
 // ROUTES
 let aboutus = require("./routes/AboutUs");
 let login = require("./routes/LogIn");
+let logout = require('./routes/LogOut');
 let register = require("./routes/Register");
 let catalog = require("./routes/Catalog");
 let cart = require("./routes/Cart");
@@ -78,12 +79,18 @@ app.use(express.static("assets"));
 app.use("/css", express.static(__dirname + "assets/css"));
 app.use("/imgs", express.static(__dirname + "assets/imgs"));
 
+app.use((req, res, next) => {
+	res.locals.currentUser = req.user;
+	next();
+})
+
 app.get("/", (req, res) => {
 	res.render("home");
 });
 
 app.use("/about", aboutus);
 app.use("/login", login);
+app.use("/logout", logout);
 app.use("/register", register);
 app.use("/catalog", catalog);
 app.use("/cart", cart);

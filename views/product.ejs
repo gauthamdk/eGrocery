@@ -1,49 +1,66 @@
-<%- include("./partials/header") %> 
+<%- include("./partials/header") %>
 
 <section class="container mt-5" id="background-elem">
+  <!-- subsection (about us, etc)  -->
+  <section class="container no-margin py-5">
+    <!-- button to go back -->
+    <div class="container ml-5">
+      <a href="/catalog" class="btn btn-b right"
+        ><i class="bi bi-arrow-left"></i> Back to Catalog</a
+      >
+    </div>
 
-    <!-- subsection (about us, etc)  -->
-    <section class="container no-margin py-5">
+    <div class="row no-margin align-items-center justify-content-around">
+      <img src="<%= product.image_url %> " class="col-6 no-margin" />
+      <div class="col-5">
+        <!-- Product name -->
+        <h4 class="mt-4"><%= product.name%></h4>
 
-      <!-- button to go back -->
-      <div class="container ml-5">  
-        <a href="/catalog" class="btn btn-b right"><i class="bi bi-arrow-left"></i> Back to Catalog</a>  
-      </div>
-
-      <div class="row no-margin align-items-center justify-content-around">
-        <img src="<%= product.image_url %> " class="col-6 no-margin">
-        <div class="col-5">  
-          <!-- Product name -->
-          <h4 class="mt-4"><%= product.name%></h4>
-
-          <ul>
-            <!-- Product details -->
-            <li class="list"><strong><%= product.details %> </strong></li>
-            <li class="list"><strong>Amount available: </strong><%= product.stock %> </li>
-            <li class="list"><strong>Price:</strong> AED <%= product.price %> </li>
-            <li class="list">
-              <form>
-                <div class="form-group row">
-                  <label for="qtyInput" class="col-sm-2 col-form-label">Quantity: </label>
-                  <div class="col-sm-3">
-                    <input type="number" class="form-control" id="qtyInput" placeholder="1" min='0'>
-                  </div>
+        <ul>
+          <!-- Product details -->
+          <li class="list"><strong><%= product.details %> </strong></li>
+          <li class="list">
+            <strong>Amount available: </strong><%= product.stock %>
+          </li>
+          <li class="list"><strong>Price:</strong> AED <%= product.price %></li>
+          <li class="list">
+            <form method="POST" action="/cart/<%=product._id%>/add?_method=PUT">
+              <div class="form-group row">
+                <label for="qtyInput" class="col-sm-2 col-form-label"
+                  >Quantity:
+                </label>
+                <div class="col-sm-3">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="qtyInput"
+                    placeholder="1"
+                    min="0"
+                    value="1"
+                    name="quantity"
+                  />
                 </div>
-              </form>
-            </li>
-          </ul>
-          <a href="#" class="btn btn-y shopcat"><i class="bi bi-cart-plus"></i> Add to cart!</a>
-        </div>
+              </div>
+              <button class="btn btn-y shopcat" type="submit">
+                <i class="bi bi-cart-plus"></i> Add to cart!
+              </button>
+            </form>
+          </li>
+        </ul>
       </div>
-
-    </section>
-    
+    </div>
   </section>
+</section>
 
-  <script type="text/javascript">
-    document.getElementById("catalog").classList.add("active");
-    document.getElementsByTagName("body")[0].id = "bg-img-market";
-  </script>
-  <script type="text/javascript" async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDxu_A7z9KvwfUMK3J9xUuLdhgU_8PCMPE&callback=initMap"></script>
+<script type="text/javascript">
+  document.getElementById("catalog").classList.add("active");
+  document.getElementsByTagName("body")[0].id = "bg-img-market";
+</script>
+<script
+  type="text/javascript"
+  async
+  defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDxu_A7z9KvwfUMK3J9xUuLdhgU_8PCMPE&callback=initMap"
+></script>
 
-<%- include("./partials/footer") %> 
+<%- include("./partials/footer") %>

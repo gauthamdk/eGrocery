@@ -23,7 +23,7 @@ router.get("/:category", (req, res) => {
 });
 
 router.post("/search", (req, res) => {
-  keyword = req.body.search_word;
+  let keyword = req.body.search_word;
 
   Products.find(
     { name: { $regex: keyword, $options: "i" } },

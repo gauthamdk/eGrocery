@@ -80,7 +80,7 @@
             <% if (!currentUser) { %>
             <li class="nav-item">
               <a
-                class="nav-link"
+                class="nav-link login"
                 aria-current="page"
                 onclick="window.location.href='/register'"
               >
@@ -88,13 +88,12 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" onclick="window.location.href='/login'">
+              <a class="nav-link login" onclick="window.location.href='/login'">
                 Login <i class="bi bi-person-plus-fill"></i>
               </a>
             </li>
           </ul>
           <% } else{ %>
-          <ul>
             <li class="nav-item dropdown">
               <a
                 class="nav-link"

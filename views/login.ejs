@@ -1,35 +1,46 @@
 <%- include("./partials/header") %>
-    <section class="row justify-content-center pt-5">
-        <div class="col-md-4 py-5" id="background-elem">
-            <h3>Log in</h3>
-            <form action="/login" method="post">
-                <div class="mb-3">
-                    <label for="" class="form-label">Username</label>
-                    <input type="text" class="form-control" aria-describedby="emailHelp" name="username">
-                </div>
-                <div class="mb-3">
-                    <label for="" class="form-label">Password</label>
-                    <input type="password" class="form-control" name="password">
-                </div>
-                <!-- <div class="mb-3 form-check">
+<section class="row justify-content-center pt-5 mt-4">
+  <div class="col-md-4 py-5 rounded shadow-lg" id="background-elem">
+    <h3>Log in</h3>
+    <form action="/login" method="post">
+      <div class="mb-3">
+        <label for="" class="form-label">Username</label>
+        <input
+          type="text"
+          class="form-control"
+          aria-describedby="emailHelp"
+          name="username"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="" class="form-label">Password</label>
+        <input type="password" class="form-control" name="password" />
+      </div>
+      <!-- <div class="mb-3 form-check">
                     <input type="checkbox" class="form-check-input" id="exampleCheck1">
                     <label class="form-check-label" for="exampleCheck1">Keep me logged in</label>
                 </div> -->
-                <button type="submit" class="btn btn-y" value="Submit">Login <i class="bi bi-person-plus-fill"></i></button>
-                <hr>
-                <p>New to eGrocery?</p>
-                <button type="button" class="btn btn-y" onclick="window.location.href='/register'">
-                    Create an Account <i class="bi bi-person-plus"></i>
-                </button>
-            </form>
-        </div>
-    </section>
+      <button type="submit" class="btn btn-y" value="Submit">
+        Login <i class="bi bi-person-plus-fill"></i>
+      </button>
+      <hr />
+      <p>New to eGrocery?</p>
+      <button
+        type="button"
+        class="btn btn-y"
+        onclick="window.location.href='/register'"
+      >
+        Create an Account <i class="bi bi-person-plus"></i>
+      </button>
+    </form>
+  </div>
+</section>
 
-    <script type="text/javascript">
-        let login = document.getElementsByClassName("login")
-        for (let x of login) {
-            x.classList.add("active");
-        }
-        document.getElementsByTagName("body")[0].id = "bg-img-market";
-    </script>    
+<script type="text/javascript">
+  let login = document.getElementsByClassName("login");
+  for (let x of login) {
+    x.classList.add("active");
+  }
+  document.getElementsByTagName("body")[0].id = "bg-img-market";
+</script>
 <%- include("./partials/footer") %>

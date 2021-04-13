@@ -18,8 +18,6 @@ router.post(
   (req, res) => {
     let product = req.params.product_id;
 
-    console.log(req.body.quantity);
-
     User.findByIdAndUpdate(
       req.user._id,
       { cart: [{ product_id: product, count: req.body.quantity }] },

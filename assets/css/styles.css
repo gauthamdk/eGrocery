@@ -147,6 +147,16 @@ a:hover {
 	margin-top: 20px;
 }
 
+.cart-product {
+	border: #adafb3 2px solid;
+	border-radius: 3%;
+}
+
+.cart-image {
+	max-height: 120px;
+	max-width: 120px;
+}
+
 #to-catalog {
 	padding: 15px;
 	font-size: 20px;

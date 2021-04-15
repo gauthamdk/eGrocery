@@ -34,22 +34,22 @@
     <h2 class="display-2 text-centered txt-blue mb-5 pt-3"><strong>Come Shop with Us!</strong></h2>
     
     <!-- cards -->
-    <div class="row">
-      <div class="card col-lg-3 col-sm-6 mb-1">
+    <div class="mx-5 row justify-content-center">
+      <div class="card col-md-3 col-sm-6 col-12 mb-1">
         <img src="https://wallpaperaccess.com/full/3471160.jpg" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">Breakfast & Cereal</h5>
           <a href="#" class="btn btn-y shopcat">Shop</a>
         </div>
       </div>
-      <div class="card col-lg-3 col-sm-6 mb-1">
+      <div class="card col-md-3 col-sm-6 col-12 mb-1">
         <img src="../assets/categories/bread.jpeg" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">Bread & Bakery</h5>
           <a href="#" class="btn btn-y shopcat">Shop</a>
         </div>
       </div>
-      <div class="card col-lg-3 col-sm-6 mb-1">
+      <div class="card col-12 col-md-3 col-sm-6 mb-1">
         <img src="../assets/categories/egg.jpg" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">Diary, Eggs & Cheese</h5>
@@ -57,7 +57,7 @@
           <a href="#" class="btn btn-y shopcat">Shop</a>
         </div>
       </div>
-      <div class="card col-lg-3 col-sm-6 mb-1">
+      <div class="card col-md-3 col-sm-6 col-12 mb-1">
         <img src="https://i.pinimg.com/originals/31/7b/72/317b72fe0ebc551d0cad86e3f2ce6495.jpg" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">Fruits & Vegetables</h5>
@@ -76,22 +76,26 @@
   </section>
 
   <!-- About us mini section -->
-  <div class="row no-margin align-items-between">
-    <div class="col-6">  
-      <h2 class="display-2 text-centered txt-green caps mb-5 pt-3">About Us</h2>
-      <h3 class="txt-yellow text-centered mb-3"><strong>Who we are</strong></h3>
-      <!-- text content -->
-      <div class="row justify-content-center">  
-        <p class="col-md-8"><strong>We are a Saadiyat based grocery store ready to deliver fresh groceries and delicious snacks.</strong></p>
-      </div>
+  <section id="bg-img-market">
+    <div class="flex-row-reverse row no-margin align-items-between">
+      <img src="../assets/imgs/about2.jpg" class="col-md-6 no-margin">
+      <div class="col-md-6" id="background-elem">  
+        <h2 class="display-2 text-centered txt-green caps mb-5 pt-3">About Us</h2>
+        <h3 class="txt-yellow text-centered mb-3"><strong>Who we are</strong></h3>
+        <!-- text content -->
+        <div class="row justify-content-center">  
+          <p class="col-md-8"><strong>We are a Saadiyat based grocery store ready to deliver fresh groceries and delicious snacks.</strong></p>
+        </div>
 
-      <!-- button to about -->
-      <div class="d-flex justify-content-center align-items-center">
-        <a href="/about" class="btn" id="learn-more">Learn More <i class="bi bi-three-dots"></i></a>
+        <!-- button to about -->
+        <div class="d-flex justify-content-center align-items-center">
+          <a href="/about" class="btn btn-b" id="learn-more">Learn More <i class="bi bi-three-dots"></i></a>
+        </div>
+
+        <hr>
       </div>
     </div>
-    <img src="../assets/imgs/about2.jpg" class="col-6 no-margin">
-  </div>
+  </section>
 
   <script type="text/javascript">
     document.getElementById("home").classList.add("active");

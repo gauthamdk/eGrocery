@@ -2,6 +2,25 @@
 <%- include('./partials/header.ejs') %>
 
     <section class="container pt-5 mt-5 mb-4" id="background-elem">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <form
+                    class="d-flex"
+                    id="search"
+                    method="POST"
+                    action="/catalog/search"
+                >
+                    <input
+                    class="form-control me-2"
+                    type="search"
+                    placeholder="Search"
+                    aria-label="Search"
+                    name="search_word"
+                    />
+                    <button class="btn" type="submit" value="Submit">Search</button>
+                </form>
+            </div>
+        </div>
         <!-- CATEGORIES -->
         <section class="container my-5">
             <h3>Categories</h3>
@@ -70,5 +89,5 @@
     
     </section>
     
-<%- include('./partials/footer.ejs') %>
+<%- include('./partials/footer') %>
     

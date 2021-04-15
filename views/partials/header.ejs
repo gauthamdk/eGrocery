@@ -25,6 +25,9 @@
         <a class="navbar-brand" onclick="window.location.href='/'">
           <img id="logo" src="/assets/cart_logo.png" />
         </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
         <div
           class="collapse navbar-collapse align-items-between"
           id="navbarSupportedContent"
@@ -56,24 +59,6 @@
               >
             </li>
           </ul>
-
-          <% if(currentPage == 'catalog') {%>
-          <form
-            class="d-flex"
-            id="search"
-            method="POST"
-            action="/catalog/search"
-          >
-            <input
-              class="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-              name="search_word"
-            />
-            <button class="btn" type="submit" value="Submit">Search</button>
-          </form>
-          <% } %>
 
           <!-- login / register side -->
           <ul class="navbar-nav mr-auto mb-2 mb-lg-0">

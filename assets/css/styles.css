@@ -134,7 +134,7 @@ a:hover {
 }
 
 .title {
-	font-size: 7em;
+	font-size: 6em;
 	font-weight: bold;
 }
 
@@ -165,10 +165,10 @@ a:hover {
 }
 
 #learn-more {
-	color: #ffffff;
+	/* color: #ffffff; */
 	font-size: 25px;
 	margin: 20% auto;
-	background-color: #121212;
+	/* background-color: #121212; */
 }
 
 #nav {

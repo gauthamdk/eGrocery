@@ -1,8 +1,8 @@
-let express = require('express');
+let express = require("express");
 let router = express.Router();
 
-router.get('/', (req,res)=>{
-    res.send("Profile Page, will be personalized per user");
-})
+router.get("/", (req, res) => {
+  res.render("userprofile");
+});
 
 module.exports = router;

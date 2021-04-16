@@ -24,10 +24,7 @@
       <tr>
         <th scope="row">1</th>
         <td>
-          <img
-            class="cart-image"
-            src="../assets/imgs/hide-the-pain-harold-stock-photo.jpg"
-          />
+          <img class="cart-image" src="<%= item.image%>" />
         </td>
         <td><%= item.name %></td>
         <td><%= item.price %></td>
@@ -42,7 +39,11 @@
         </td>
         <td>13443</td>
         <td>
-          <a href="#" class="btn btn-danger"><i class="bi bi-trash"></i></a>
+          <form action="/cart/<%= item.id %>/remove?_method=PUT" method="POST">
+            <button type="submit" class="btn btn-danger">
+              <i class="bi bi-trash"></i>
+            </button>
+          </form>
         </td>
       </tr>
       <% }) %>

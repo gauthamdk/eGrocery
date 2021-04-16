@@ -12,7 +12,7 @@ const UserDetail = new mongoose.Schema({
   cart: [
     {
       product_id: { type: mongoose.Schema.Types.ObjectId, ref: "Product" },
-      count: Number,
+      count: { type: Number, default: 0 },
     },
   ],
   admin: Boolean,

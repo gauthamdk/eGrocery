@@ -1,9 +1,11 @@
 let express = require("express"),
   flash = require("connect-flash"),
   cookieParser = require("cookie-parser"),
-  connectEnsureLogin = require("connect-ensure-login");
+  connectEnsureLogin = require("connect-ensure-login"),
+  methodOverride = require("method-override");
 
 const app = express();
+app.use(methodOverride("_method"));
 
 // MODELS
 let UserDetails = require("./models/User");

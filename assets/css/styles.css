@@ -218,3 +218,11 @@ a:hover {
 #profile_icon {
 	font-size: 1.8rem;
 }
+
+#user-drop {
+	line-height: 0;
+}
+
+#user-drop * {
+	line-height: 1.5;
+}

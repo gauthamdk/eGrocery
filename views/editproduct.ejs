@@ -10,35 +10,53 @@
       >
     </div>
     <form method="POST" action="/cart/<%=product._id%>/add?_method=PUT">
-    <div class="row no-margin align-items-center justify-content-around">
-      <img src="<%= product.image_url %> " class="col-6 no-margin" />
-      <div class="col-5">
-        <!-- Product name -->
-        <!-- <h4 class="mt-4"><%= product.name%></h4> -->
-        <div class="mt-4">
-          <input type="text" class="form-control" name="image" value="<%= product.name>">
-        </div>
+      <div class="row no-margin align-items-center justify-content-around">
+        <img src="<%= product.image_url %> " class="col-6 no-margin" />
+        <div class="col-5">
+          <!-- Product name -->
+          <!-- <h4 class="mt-4"><%= product.name%></h4> -->
+          <div class="mt-4">
+            <input
+              type="text"
+              class="form-control"
+              name="image"
+              value="<%= product.name %>"
+            />
+          </div>
 
-        <ul>
-          <!-- Product details -->
-          <li class="list">
-            <textarea name='details'><%= product.name%></textarea>
-            <!-- <strong><%= product.details %> </strong></li> -->
-          <li class="list">
-            <strong>Amount available: </strong>
-            <input type="number" class="form-control" name="stock" value="<%= product.stock>">
-            <!-- <strong>Amount available: </strong><%= product.stock %> -->
-          </li>
-          <li class="list"><strong>Price:</strong> AED 
-            <input type="number" class="form-control" name="price" value="<%= product.price>">
-            <!-- <%= product.price %> -->
-          </li>
-          <button class="btn btn-y shopcat" type="submit">
-            <i class="bi bi-pencil-square"></i> Save
-          </button>
-        </ul>
+          <ul>
+            <!-- Product details -->
+            <li class="list">
+              <textarea name="details"><%= product.name%></textarea>
+              <!-- <strong><%= product.details %> </strong></li> -->
+            </li>
+
+            <li class="list">
+              <strong>Amount available: </strong>
+              <input
+                type="number"
+                class="form-control"
+                name="stock"
+                value="<%= product.stock %>"
+              />
+              <!-- <strong>Amount available: </strong><%= product.stock %> -->
+            </li>
+            <li class="list">
+              <strong>Price:</strong> AED
+              <input
+                type="number"
+                class="form-control"
+                name="price"
+                value="<%= product.price %>"
+              />
+              <!-- <%= product.price %> -->
+            </li>
+            <button class="btn btn-y shopcat" type="submit">
+              <i class="bi bi-pencil-square"></i> Save
+            </button>
+          </ul>
+        </div>
       </div>
-    </div>
     </form>
   </section>
 </section>

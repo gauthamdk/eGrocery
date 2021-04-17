@@ -102,7 +102,7 @@ app.use("/cart", cart);
 app.use("/profile", profile);
 app.use("/catalog/product", product);
 app.use("/addproduct", addproduct);
-app.use("/editproduct", editproduct);
+app.use("/catalog/editproduct", editproduct);
 
 app.listen(port, () => {
   console.log(`App running on port ${port}`);

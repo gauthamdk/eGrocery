@@ -1,0 +1,57 @@
+<%- include("./partials/header") %>
+
+<section class="container mt-5" id="background-elem">
+  <!-- subsection (about us, etc)  -->
+  <section class="container no-margin py-5">
+    <!-- button to go back -->
+    <div class="container ml-5">
+      <a href="/catalog" class="btn btn-b right"
+        ><i class="bi bi-arrow-left"></i> Back to Catalog</a
+      >
+    </div>
+    <form method="POST" action="/cart/<%=product._id%>/add?_method=PUT">
+    <div class="row no-margin align-items-center justify-content-around">
+      <img src="<%= product.image_url %> " class="col-6 no-margin" />
+      <div class="col-5">
+        <!-- Product name -->
+        <!-- <h4 class="mt-4"><%= product.name%></h4> -->
+        <div class="mt-4">
+          <input type="text" class="form-control" name="image" value="<%= product.name>">
+        </div>
+
+        <ul>
+          <!-- Product details -->
+          <li class="list">
+            <textarea name='details'><%= product.name%></textarea>
+            <!-- <strong><%= product.details %> </strong></li> -->
+          <li class="list">
+            <strong>Amount available: </strong>
+            <input type="number" class="form-control" name="stock" value="<%= product.stock>">
+            <!-- <strong>Amount available: </strong><%= product.stock %> -->
+          </li>
+          <li class="list"><strong>Price:</strong> AED 
+            <input type="number" class="form-control" name="price" value="<%= product.price>">
+            <!-- <%= product.price %> -->
+          </li>
+          <button class="btn btn-y shopcat" type="submit">
+            <i class="bi bi-pencil-square"></i> Save
+          </button>
+        </ul>
+      </div>
+    </div>
+    </form>
+  </section>
+</section>
+
+<script type="text/javascript">
+  document.getElementById("catalog").classList.add("active");
+  document.getElementsByTagName("body")[0].id = "bg-img-market";
+</script>
+<script
+  type="text/javascript"
+  async
+  defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDxu_A7z9KvwfUMK3J9xUuLdhgU_8PCMPE&callback=initMap"
+></script>
+
+<%- include("./partials/footer") %>

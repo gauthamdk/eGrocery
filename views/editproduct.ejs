@@ -1,64 +1,60 @@
 <%- include("./partials/header") %>
 
-<section class="container mt-5" id="background-elem">
-  <!-- subsection (about us, etc)  -->
-  <section class="container no-margin py-5">
-    <!-- button to go back -->
-    <div class="container ml-5">
-      <a href="/catalog" class="btn btn-b right"
-        ><i class="bi bi-arrow-left"></i> Back to Catalog</a
-      >
-    </div>
-    <form method="POST" action="/cart/<%=product._id%>/add?_method=PUT">
-      <div class="row no-margin align-items-center justify-content-around">
-        <img src="<%= product.image_url %> " class="col-6 no-margin" />
-        <div class="col-5">
-          <!-- Product name -->
-          <!-- <h4 class="mt-4"><%= product.name%></h4> -->
-          <div class="mt-4">
-            <input
-              type="text"
-              class="form-control"
-              name="image"
-              value="<%= product.name %>"
-            />
-          </div>
+<section class="container no-margin py-5">
+  <!-- button to go back -->
+  <div class="container ml-5">
+    <a href="/catalog" class="btn btn-b right"><i class="bi bi-arrow-left"></i> Back to Catalog</a>
+  </div>
+  <form method="POST" action="/cart/<%=product._id%>/add?_method=PUT">
+    <div class="row no-margin align-items-center justify-content-around">
+      <div class="col-5">
+        <h3>Edit Product</h3>
+        <div class="mb-4">
+          <label for="imageURL" class="form-label">
+            Image URL
+          </label>
+          <input type="text" class="form-control" name="image" value="<%=product.image_url%>" />
+        </div>
 
-          <ul>
-            <!-- Product details -->
-            <li class="list">
-              <textarea name="details"><%= product.name%></textarea>
-              <!-- <strong><%= product.details %> </strong></li> -->
-            </li>
+        <!-- Product name -->
+        <div class="mb-4">
+          <label for="name" class="form-label">
+            Name
+          </label>
+          <input type="text" class="form-control" name="image" value="<%=product.name%>" />
+        </div>
 
-            <li class="list">
-              <strong>Amount available: </strong>
-              <input
-                type="number"
-                class="form-control"
-                name="stock"
-                value="<%= product.stock %>"
-              />
-              <!-- <strong>Amount available: </strong><%= product.stock %> -->
-            </li>
-            <li class="list">
-              <strong>Price:</strong> AED
-              <input
-                type="number"
-                class="form-control"
-                name="price"
-                value="<%= product.price %>"
-              />
-              <!-- <%= product.price %> -->
-            </li>
-            <button class="btn btn-y shopcat" type="submit">
-              <i class="bi bi-pencil-square"></i> Save
-            </button>
-          </ul>
+        <!-- Product details -->
+        <div class="mb-4">
+          <label for="details" class="form-label">Details</label>
+          <textarea class="form-control" name="details"></textarea>
+        </div>
+
+        <div class="mb-4">
+          <label for="stock" class="form-label">
+            Amount available
+          </label>
+          <input type="number" class="form-control" name="stock" value="<%=product.stock%>" />
+        </div>
+
+        <div class="mb-4">
+          <label for="price" class="form-label">
+            Price
+          </label> AED
+          <input type="number" class="form-control" name="price" value="<%=product.price%>" />
+        </div>
+
+        <div class="mb-4">
+          <button class="btn btn-y shopcat" type="submit">
+            Save
+          </button>
+          <button class="btn btn-y shopcat" type="submit">
+            Delete
+          </button>
         </div>
       </div>
-    </form>
-  </section>
+    </div>
+  </form>
 </section>
 
 <script type="text/javascript">

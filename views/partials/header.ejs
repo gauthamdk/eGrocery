@@ -78,7 +78,7 @@
                 Login <i class="bi bi-person-plus-fill"></i>
               </a>
             </li>
-          </ul>
+
           <% } else{ %>
             <li class="nav-item dropdown">
               <a
@@ -106,11 +106,15 @@
                 <li><a class="dropdown-item" href="/logout">Sign Out</a></li>
               </ul>
             </li>
-            <a class="nav-item" href="/addproduct">
-              <i class="bi bi-plus-square"></i></a>
-          
+            
+            <li class="nav-item mt-2" id='addproduct' onclick="window.location.href='/addproduct'">
+              <a class="nav-item" href="/addproduct">
+                <i id='ap_icon' class="bi bi-plus-square"></i>
+              </a>
+            </li>
             <% } %>
           </ul>
+
         </div>
       </div>
     </nav>

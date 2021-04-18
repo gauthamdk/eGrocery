@@ -22,6 +22,7 @@ let profile = require("./routes/Profile");
 let product = require("./routes/Product");
 let addproduct = require("./routes/AddProduct");
 let editproduct = require("./routes/EditProduct");
+let deleteproduct = require("./routes/DeleteProduct");
 
 app.use(express.static(__dirname));
 app.set("view engine", "ejs");
@@ -103,6 +104,7 @@ app.use("/profile", profile);
 app.use("/catalog/product", product);
 app.use("/addproduct", addproduct);
 app.use("/catalog/editproduct", editproduct);
+app.use("/delete", deleteproduct);
 
 app.listen(port, () => {
   console.log(`App running on port ${port}`);

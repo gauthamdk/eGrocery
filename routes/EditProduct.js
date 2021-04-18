@@ -27,7 +27,7 @@ router.put("/:productid", (req, res) => {
         console.log(err);
       } else {
         console.log("Updated the product");
-        res.redirect("/catalog");
+        res.redirect("/catalog/product/" + updatedProduct._id);
       }
     }
   );

@@ -1,8 +1,9 @@
+const { ensureLoggedIn } = require("connect-ensure-login");
 let express = require("express");
 let router = express.Router();
 const Product = require("../models/Product");
 
-router.delete("/:productid", (req, res) => {
+router.delete("/:productid", ensureLoggedIn(), (req, res) => {
   Product.findByIdAndDelete(req.params.productid, (err) => {
     if (err) {
       console.log(err);

@@ -1,12 +1,13 @@
+const { ensureLoggedIn } = require("connect-ensure-login");
 let express = require("express");
 const Product = require("../models/Product");
 let router = express.Router();
 
-router.get("/", (req, res) => {
+router.get("/", ensureLoggedIn(), (req, res) => {
   res.render("addproduct");
 });
 
-router.post("/", (req, res) => {
+router.post("/", ensureLoggedIn(), (req, res) => {
   const product = {
     name: req.body.name,
     price: req.body.price,

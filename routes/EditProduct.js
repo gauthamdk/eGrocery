@@ -8,7 +8,7 @@ router.get("/:productid", (req, res) => {
   });
 });
 
-router.put("/:productid", (req, res) => {
+router.put("/:productid", ensureLoggedIn(), (req, res) => {
   const newdetails = {
     name: req.body.name,
     price: req.body.price,

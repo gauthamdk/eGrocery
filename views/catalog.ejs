@@ -1,99 +1,111 @@
-    
 <%- include('./partials/header') %>
 
-    <section class="container pt-5 mt-5 mb-4" id="background-elem">
-        <div class="row justify-content-center">
-            <div class="col-lg-6 col-md-8">
-                <form
-                    class="d-flex"
-                    id="search"
-                    method="POST"
-                    action="/catalog/search"
-                >
-                    <input
-                    class="form-control me-2"
-                    type="search"
-                    placeholder="Search"
-                    aria-label="Search"
-                    name="search_word"
-                    />
-                    <button class="btn btn-g" type="submit" value="Submit"><i class="bi bi-search"></i></button>
-                </form>
-            </div>
-        </div>
-        <!-- CATEGORIES -->
-        <section class="container my-5">
-            <h3>Categories</h3>
-            <div class="row">
-                <div class="card col-lg-3 col-sm-6 mb-1">
-                    <img src="https://wallpaperaccess.com/full/3471160.jpg" 
-                    class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Breakfast & Cereal</h5>
-                        <a href="/catalog/Breakfast & Cereal" class="btn shopcat btn-y">Shop</a>
-                    </div>
-                </div>
-                <div class="card col-lg-3 col-sm-6 mb-1">
-                    <img src="../assets/categories/bread.jpeg" 
-                    class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Bread & Bakery</h5>
-                        
-                        <a href="/catalog/Bread & Bakery" class="btn shopcat btn-y">Shop</a>
-                    </div>
-                </div>
-                <div class="card col-lg-3 col-sm-6 mb-1">
-                    <img src="../assets/categories/egg.jpg" 
-                    class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Diary, Eggs & Cheese</h5>
-                        
-                        <a href="/catalog/Diary, Eggs & Cheese" class="btn shopcat btn-y">Shop</a>
-                    </div>
-                </div>
-                <div class="card col-lg-3 col-sm-6 mb-1">
-                    <img src="https://i.pinimg.com/originals/31/7b/72/317b72fe0ebc551d0cad86e3f2ce6495.jpg" 
-                    class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Fruits & Vegetables</h5>
-                        
-                        <a href="/catalog/Fruits & Vegetables" class="btn shopcat btn-y">Shop</a>
-                    </div>
-                </div>
-            </div>
-
-        
-        </section>
-    
-    
-        <!-- cards grid -->
-        <section class="container my-5">
-            <h3>Products</h3>
-
-                
-        <div class="row">
-
-            <% products.forEach(product => { %>
-
-                <div class="card col-lg-4 col-sm-6 mb-5">
-                    <img src="<%= product.image_url%>" class="card-img-top product-img">
-                    <div class="card-body">
-                        <h5 class="card-title"><%= product.name%></h5>
-                        <a href="/catalog/product/<%= product._id%>" class="btn">Add to Cart</a>
-                        <a href="/catalog/editproduct/<%= product._id%>" class="btn">Edit product</a>
-                    </div>
-                </div>
-    <% }); %> 
+<section class="container pt-5 mt-5 mb-4" id="background-elem">
+  <div class="row justify-content-center">
+    <div class="col-lg-6 col-md-8">
+      <form class="d-flex" id="search" method="POST" action="/catalog/search">
+        <input
+          class="form-control me-2"
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+          name="search_word"
+        />
+        <button class="btn btn-g" type="submit" value="Submit">
+          <i class="bi bi-search"></i>
+        </button>
+      </form>
     </div>
+  </div>
+  <!-- CATEGORIES -->
+  <section class="container my-5">
+    <h3>Categories</h3>
+    <div class="row">
+      <div class="card col-lg-3 col-sm-6 mb-1">
+        <img
+          src="https://wallpaperaccess.com/full/3471160.jpg"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">Breakfast & Cereal</h5>
+          <a href="/catalog/Breakfast & Cereal" class="btn shopcat btn-y"
+            >Shop</a
+          >
+        </div>
+      </div>
+      <div class="card col-lg-3 col-sm-6 mb-1">
+        <img
+          src="../assets/categories/bread.jpeg"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">Bread & Bakery</h5>
 
-        </section>
-    
-    </section>
-    
-    <script>
-        document.getElementById("catalog").classList.add("active");
-        document.getElementsByTagName("body")[0].id = "bg-img-market"
-    </script>
+          <a href="/catalog/Bread & Bakery" class="btn shopcat btn-y">Shop</a>
+        </div>
+      </div>
+      <div class="card col-lg-3 col-sm-6 mb-1">
+        <img
+          src="../assets/categories/egg.jpg"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">Diary, Eggs & Cheese</h5>
+
+          <a href="/catalog/Diary, Eggs & Cheese" class="btn shopcat btn-y"
+            >Shop</a
+          >
+        </div>
+      </div>
+      <div class="card col-lg-3 col-sm-6 mb-1">
+        <img
+          src="https://i.pinimg.com/originals/31/7b/72/317b72fe0ebc551d0cad86e3f2ce6495.jpg"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">Fruits & Vegetables</h5>
+
+          <a href="/catalog/Fruits & Vegetables" class="btn shopcat btn-y"
+            >Shop</a
+          >
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- cards grid -->
+  <section class="container my-5">
+    <h3>Products</h3>
+
+    <div class="row">
+      <% products.forEach(product => { %>
+
+      <div class="card col-lg-4 col-sm-6 mb-5">
+        <img src="<%= product.image_url%>" class="card-img-top product-img" />
+        <div class="card-body">
+          <h5 class="card-title"><%= product.name%></h5>
+          <a href="/catalog/product/<%= product._id%>" class="btn"
+            >Add to Cart</a
+          >
+          <% if(currentUser && currentUser.admin){%>
+          <a href="/catalog/editproduct/<%= product._id%>" class="btn"
+            >Edit product</a
+          >
+          <% } %>
+        </div>
+      </div>
+      <% }); %>
+    </div>
+  </section>
+</section>
+
+<script>
+  document.getElementById("catalog").classList.add("active");
+  document.getElementsByTagName("body")[0].id = "bg-img-market";
+</script>
 
 <%- include('./partials/footer') %>
-    

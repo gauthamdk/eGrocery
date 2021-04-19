@@ -1,14 +1,15 @@
 let express = require("express");
 let router = express.Router();
 const Product = require("../models/Product");
+const connectEnsureLogin = require("connect-ensure-login");
 
-router.get("/:productid", (req, res) => {
+router.get("/:productid", connectEnsureLogin.ensureLoggedIn(), (req, res) => {
   Product.findById(req.params.productid, (err, product) => {
     res.render("editproduct", { product: product });
   });
 });
 
-router.put("/:productid", ensureLoggedIn(), (req, res) => {
+router.put("/:productid", connectEnsureLogin.ensureLoggedIn(), (req, res) => {
   const newdetails = {
     name: req.body.name,
     price: req.body.price,

@@ -47,30 +47,33 @@
                 class="nav-link"
                 aria-current="page"
                 onclick="window.location.href='/'"
-                >Home</a
               >
+                Home
+              </a>
             </li>
             <li class="nav-item">
               <a
-                id="catalog"
-                class="nav-link"
-                onclick="window.location.href='/catalog'"
-                >Catalog</a
+              id="catalog"
+              class="nav-link"
+              onclick="window.location.href='/catalog'"
               >
+                Catalog
+              </a>
             </li>
             <li class="nav-item">
               <a
                 id="about"
                 class="nav-link"
                 onclick="window.location.href='/about'"
-                >About Us</a
               >
+                About Us
+              </a>
             </li>
           </ul>
 
           <!-- login / register side -->
+          <% if (!currentUser) { %>
           <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
-            <% if (!currentUser) { %>
             <li class="nav-item">
               <a
                 class="nav-link"
@@ -91,45 +94,26 @@
               </a>
             </li>
 
-            <% } else{ %>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                <i id="profile_icon" class="bi bi-person-circle"></i>
-              </a>
-              <ul
-                class="dropdown-menu dropdown-menu-end"
-                aria-labelledby="navbarDropdown"
-              >
-                <p id="account_heading"><%= currentUser.name %></p>
-                <li><a class="dropdown-item" href="#">Profile</a></li>
-                <li><a class="dropdown-item" href="#">Orders</a></li>
-                <li><a class="dropdown-item" href="/cart">Cart</a></li>
-                <li>
-                  <hr class="dropdown-divider" />
-                </li>
-
-                <li><a class="dropdown-item" href="/logout">Sign Out</a></li>
-              </ul>
-            </li>
-
-            <li
-              class="nav-item mt-2"
-              id="addproduct"
-              onclick="window.location.href='/addproduct'"
-            >
-              <a class="nav-item" href="/addproduct">
-                <i id="ap_icon" class="bi bi-plus-square"></i>
-              </a>
-            </li>
-            <% } %>
-          </ul>
+          <% } else{ %>
+          <li class="nav-item dropdown" id="user-drop">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i id="profile_icon" class="bi bi-person-circle"></i>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <p id="account_heading" class="dropdown-item"><%= currentUser.name %></p>
+              <a class="dropdown-item" href="#">Profile</a>
+              <a class="dropdown-item" href="#">Orders</a>
+              <a class="dropdown-item" href="/cart">Cart</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="/logout">Sign Out</a>
+            </div>
+          </li>
+          <li class="nav-item mt-2" id='addproduct' onclick="window.location.href='/addproduct'">
+            <a class="nav-item" href="/addproduct">
+              <i id='ap_icon' class="bi bi-plus-square"></i>
+            </a>
+          </li>
+          <% } %>
         </div>
       </div>
     </nav>

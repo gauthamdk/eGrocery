@@ -11,7 +11,10 @@
     </div>
 
     <div class="row no-margin align-items-center justify-content-around">
-      <img src="<%= product.image_url %> " class="col-6 no-margin" />
+      <div class="card col-6 mb-1">
+        <img src= "<%= product.image_url %> "
+        class="card-img-top" alt="...">
+      </div>
       <div class="col-5">
         <!-- Product name -->
         <h4 class="mt-4"><%= product.name%></h4>
@@ -19,6 +22,7 @@
         <ul>
           <!-- Product details -->
           <li class="list"><strong><%= product.details %> </strong></li>
+          <li class="list"><strong>Best by: <%= product.expiry %></strong></li>
           <li class="list">
             <strong>Amount available: </strong><%= product.stock %>
           </li>

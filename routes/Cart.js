@@ -30,7 +30,7 @@ router.get("/", connectEnsureLogin.ensureLoggedIn(), (req, res) => {
   });
 });
 
-router.post(
+router.put(
   "/:product_id/add",
   connectEnsureLogin.ensureLoggedIn(),
   async (req, res) => {
@@ -102,22 +102,26 @@ router.post(
   }
 );
 
-router.put("/:productid/remove", (req, res) => {
-  User.updateOne(
-    { _id: req.user._id },
-    {
-      $pull: { cart: { product_id: req.params.productid } },
-    },
-    (err) => {
-      if (err) {
-        console.log(err);
-      } else {
-        console.log("Removed from cart");
+router.put(
+  "/:productid/remove",
+  connectEnsureLogin.ensureLoggedIn(),
+  (req, res) => {
+    User.updateOne(
+      { _id: req.user._id },
+      {
+        $pull: { cart: { product_id: req.params.productid } },
+      },
+      (err) => {
+        if (err) {
+          console.log(err);
+        } else {
+          console.log("Removed from cart");
 
-        res.redirect("/cart");
+          res.redirect("/cart");
+        }
       }
-    }
-  );
-});
+    );
+  }
+);
 
 module.exports = router;

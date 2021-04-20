@@ -81,7 +81,7 @@
                 Login <i class="bi bi-person-plus-fill"></i>
               </a>
             </li>
-          </ul>
+
           <% } else{ %>
           <li class="nav-item dropdown" id="user-drop">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -91,9 +91,15 @@
               <p id="account_heading" class="dropdown-item"><%= currentUser.name %></p>
               <a class="dropdown-item" href="#">Profile</a>
               <a class="dropdown-item" href="#">Orders</a>
+              <a class="dropdown-item" href="/cart">Cart</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Sign Out</a>
+              <a class="dropdown-item" href="/logout">Sign Out</a>
             </div>
+          </li>
+          <li class="nav-item mt-2" id='addproduct' onclick="window.location.href='/addproduct'">
+            <a class="nav-item" href="/addproduct">
+              <i id='ap_icon' class="bi bi-plus-square"></i>
+            </a>
           </li>
           <% } %>
         </div>

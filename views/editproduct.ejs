@@ -1,0 +1,100 @@
+<%- include("./partials/header") %>
+
+<section class="container no-margin py-5">
+  <!-- button to go back -->
+  <div class="container ml-5">
+    <a href="/catalog" class="btn btn-b right"
+      ><i class="bi bi-arrow-left"></i> Back to Catalog</a
+    >
+  </div>
+  <div class="row no-margin align-items-center justify-content-around">
+    <div class="col-5">
+      <form
+        method="POST"
+        action="/catalog/editproduct/<%=product._id%>?_method=PUT"
+      >
+        <h3>Edit Product</h3>
+        <div class="mb-4">
+          <label for="image" class="form-label"> Image URL </label>
+          <input
+            type="text"
+            class="form-control"
+            name="image"
+            value="<%=product.image_url%>"
+          />
+        </div>
+
+        <!-- Product name -->
+        <div class="mb-4">
+          <label for="name" class="form-label"> Name </label>
+          <input
+            type="text"
+            class="form-control"
+            name="name"
+            value="<%=product.name%>"
+          />
+        </div>
+
+        <!-- Product category-->
+        <div class="mb-4">
+          <label for="category" class="form-label"> Category </label>
+          <select id="category" name="category">
+            <option value="Fruits & Vegetables">Fruits and Vegetables</option>
+            <option value="Dairy, Eggs & Cheese">Dairy, Eggs and Cheese</option>
+            <option value="Bread & Bakery">Bread and Bakery</option>
+            <option value="Breakfast & Cereal">Breakfast and Cereal</option>
+          </select>
+        </div>
+
+        <!-- Product details -->
+        <div class="mb-4">
+          <label for="details" class="form-label">Details</label>
+          <textarea class="form-control" name="details">
+<%= product.details %> </textarea
+          >
+        </div>
+
+        <div class="mb-4">
+          <label for="stock" class="form-label">Stock</label>
+          <input
+            type="number"
+            class="form-control"
+            name="stock"
+            value="<%=product.stock%>"
+          />
+        </div>
+
+        <div class="mb-4">
+          <label for="price" class="form-label"> Price </label> (AED)
+          <input
+            type="number"
+            class="form-control"
+            name="price"
+            value="<%=product.price%>"
+          />
+        </div>
+
+        <button class="btn btn-y shopcat" type="submit">Save</button>
+      </form>
+
+      <div class="pt-3">
+        <form action="/delete/<%= product._id %>?_method=DELETE" method="post">
+          <button class="btn btn-danger shopcat" type="submit">Delete</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script type="text/javascript">
+  document.getElementById("catalog").classList.add("active");
+  document.getElementsByTagName("body")[0].id = "bg-img-market";
+</script>
+<script
+  type="text/javascript"
+  async
+  defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDxu_A7z9KvwfUMK3J9xUuLdhgU_8PCMPE&callback=initMap"
+></script>
+
+<%- include("./partials/footer") %>

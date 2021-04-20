@@ -1,0 +1,47 @@
+<%- include("./partials/header") %>
+
+<section class="row justify-content-center pt-5 mt-5">
+  <div class="col-md-4 py-5 rounded shadow-lg" id="background-elem">
+    <h3 class="mt-0">Add Product</h3>
+    <form class="row g-3" method="post" action="/addproduct">
+      <div class="col-md-12">
+        <label for="name" class="form-label"> Product name </label>
+        <input type="text" class="form-control" name="name" required />
+      </div>
+
+      <div class="col-md-12">
+        <label for="category" class="form-label"> Product category </label>
+        <select id="category" name="category">
+          <option value="Fruits & Vegetables">Fruits and Vegetables</option>
+          <option value="Dairy, Eggs & Cheese">Dairy, Eggs and Cheese</option>
+          <option value="Bread & Bakery">Bread and Bakery</option>
+          <option value="Breakfast & Cereal">Breakfast and Cereal</option>
+        </select>
+      </div>
+
+      <div class="col-md-12">
+        <label for="stock" class="form-label">Stock Quantity</label>
+        <input type="number" class="form-control" min="0" name="stock" />
+      </div>
+
+      <div class="col-md-12">
+        <label for="image" class="form-label">Product Image URL</label>
+        <input type="text" class="form-control" name="image" />
+      </div>
+
+      <div class="col-md-12">
+        <label for="details" class="form-label">Details</label>
+        <textarea class="form-control" name="details"></textarea>
+      </div>
+
+      <div class="col-md-12">
+        <label for="price" class="form-label">Price</label>
+        <input type="number" name="price" min="0" class="form-control" />
+
+        <button type="submit" class="btn btn-y mt-3">Add product</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<%- include("./partials/footer") %>

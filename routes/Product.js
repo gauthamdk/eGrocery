@@ -26,8 +26,12 @@ router.post("/add", (req, res) => {
   Products.create(new_product, (err, new_product) => {
     if (err) {
       console.log(err);
+      req.flash("error", "Error adding product");
+      res.redirect("/catalog");
     } else {
       console.log("New product added");
+      req.flash("success", `${new_product.name} added to catalog`);
+      res.redirect("/catalog");
     }
   });
 });
@@ -48,8 +52,11 @@ router.put("/:id/edit", (req, res) => {
     (err, updated_prod) => {
       if (err) {
         console.log(err);
+        req.flash("error", "Error editing product");
+        res.redirect("/catalog");
       } else {
-        console.log(`${req.body.name} is updated`);
+        req.flash("success", `${updated_prod.name} is updated`);
+        res.redirect("/catalog");
       }
     }
   );
@@ -59,8 +66,12 @@ router.delete("/:id/delete", (req, res) => {
   Products.findByIdAndDelete(req.params.id, (err) => {
     if (err) {
       console.log(err);
+      req.flash("error", "Error deleting product");
+      res.redirect("/catalog");
     } else {
       console.log("Product deleted successfully");
+      req.flash("success", "Product deleted");
+      res.redirect("/catalog");
     }
   });
 });

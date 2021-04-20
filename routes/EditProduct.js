@@ -25,9 +25,10 @@ router.put("/:productid", connectEnsureLogin.ensureLoggedIn(), (req, res) => {
     newdetails,
     (err, updatedProduct) => {
       if (err) {
-        console.log(err);
+        req.flash("error", "Error updating product");
+        res.redirect("/catalog");
       } else {
-        console.log("Updated the product");
+        req.flash("success", "Updated the product");
         res.redirect("/catalog/product/" + updatedProduct._id);
       }
     }

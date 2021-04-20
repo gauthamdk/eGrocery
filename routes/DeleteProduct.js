@@ -10,8 +10,11 @@ router.delete(
     Product.findByIdAndDelete(req.params.productid, (err) => {
       if (err) {
         console.log(err);
+        req.flash("error", "Error deleting product");
+        res.redirect("/catalog");
       } else {
         console.log("deleted");
+        req.flash("success", "Deleted product");
         res.redirect("/catalog");
       }
     });

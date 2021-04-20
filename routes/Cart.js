@@ -54,8 +54,12 @@ router.put(
             (err, updated) => {
               if (err) {
                 console.log(err);
+                req.flash("error", "Error adding product to cart");
+                res.redirect("/catalog");
               } else {
                 console.log("updated");
+                req.flash("success", `Added ${product.name} to cart`);
+                res.redirect("/cart");
               }
             }
           );
@@ -71,8 +75,12 @@ router.put(
           (err, docs) => {
             if (err) {
               console.log(err);
+              req.flash("error", "Error adding product to cart");
+              res.redirect("/catalog");
             } else {
               console.log("Added to cart");
+              req.flash("success", `Added ${product.name} to cart`);
+              res.redirect("/cart");
             }
           }
         );
@@ -91,8 +99,12 @@ router.put(
         (err, docs) => {
           if (err) {
             console.log(err);
+            req.flash("error", "Error adding product to cart");
+            res.redirect("/catalog");
           } else {
             console.log("Added to cart");
+            req.flash("success", `Added ${product.name} to cart`);
+            res.redirect("/cart");
           }
         }
       );
@@ -114,9 +126,12 @@ router.put(
       (err) => {
         if (err) {
           console.log(err);
+          req.flash("error", "Error adding product to cart");
+          res.redirect("/catalog");
         } else {
           console.log("Removed from cart");
 
+          req.flash("success", `Removed ${product.name} from cart`);
           res.redirect("/cart");
         }
       }

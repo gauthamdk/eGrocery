@@ -20,8 +20,12 @@ router.post("/", connectEnsureLogin.ensureLoggedIn(), (req, res) => {
   Product.create(product, (err, newProduct) => {
     if (err) {
       console.log(err);
+      req.flash("error", "Error adding product");
+      res.redirect("/catalog");
     } else {
+      req.flash("success", "Added product to catalog");
       console.log("product added");
+      res.redirect("/catalog");
     }
   });
 

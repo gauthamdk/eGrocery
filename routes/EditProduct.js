@@ -18,7 +18,6 @@ router.put("/:productid", connectEnsureLogin.ensureLoggedIn(), (req, res) => {
     category: req.body.category,
     image_url: req.body.image,
   };
-  console.log(newdetails);
 
   Product.findByIdAndUpdate(
     req.params.productid,

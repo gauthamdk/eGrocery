@@ -3,32 +3,33 @@ const router = express.Router();
 const passport = require("passport");
 
 router.get("/", (req, res) => {
-	res.render("login");
+  res.render("login");
 });
 
 router.post("/", (req, res, next) => {
-	passport.authenticate(
-		"local",
+  passport.authenticate(
+    "local",
 
-		(err, user, info) => {
-			if (err) {
-				return next(err);
-			}
+    (err, user, info) => {
+      if (err) {
+        return next(err);
+      }
 
-			if (!user) {
-				req.flash("error", "Wrong username or password");
-				return res.redirect("/login");
-			}
+      if (!user) {
+        req.flash("error", "Wrong username or password");
+        return res.redirect("/login");
+      }
 
-			req.logIn(user, function (err) {
-				if (err) {
-					return next(err);
-				}
-
-				return res.redirect("/catalog");
-			});
-		}
-	)(req, res, next);
+      req.logIn(user, function (err) {
+        if (err) {
+          return next(err);
+        } else {
+          req.flash("success", "Welcome back " + user.username);
+          return res.redirect("/catalog");
+        }
+      });
+    }
+  )(req, res, next);
 });
 
 module.exports = router;

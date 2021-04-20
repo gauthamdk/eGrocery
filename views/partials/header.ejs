@@ -25,7 +25,15 @@
         <a class="navbar-brand" onclick="window.location.href='/'">
           <img id="logo" src="/assets/cart_logo.png" />
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
           <span class="navbar-toggler-icon"></span>
         </button>
         <div
@@ -74,12 +82,16 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" id="login" onclick="window.location.href='/login'">
+              <a
+                class="nav-link"
+                id="login"
+                onclick="window.location.href='/login'"
+              >
                 Login <i class="bi bi-person-plus-fill"></i>
               </a>
             </li>
 
-          <% } else{ %>
+            <% } else{ %>
             <li class="nav-item dropdown">
               <a
                 class="nav-link"
@@ -106,15 +118,18 @@
                 <li><a class="dropdown-item" href="/logout">Sign Out</a></li>
               </ul>
             </li>
-            
-            <li class="nav-item mt-2" id='addproduct' onclick="window.location.href='/addproduct'">
+
+            <li
+              class="nav-item mt-2"
+              id="addproduct"
+              onclick="window.location.href='/addproduct'"
+            >
               <a class="nav-item" href="/addproduct">
-                <i id='ap_icon' class="bi bi-plus-square"></i>
+                <i id="ap_icon" class="bi bi-plus-square"></i>
               </a>
             </li>
             <% } %>
           </ul>
-
         </div>
       </div>
     </nav>

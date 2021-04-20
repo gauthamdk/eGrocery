@@ -2,10 +2,13 @@ let express = require("express"),
   flash = require("connect-flash"),
   cookieParser = require("cookie-parser"),
   connectEnsureLogin = require("connect-ensure-login"),
-  methodOverride = require("method-override");
+  methodOverride = require("method-override"),
+  dotenv = require("dotenv");
 
 const app = express();
 app.use(methodOverride("_method"));
+
+dotenv.config();
 
 // MODELS
 let UserDetails = require("./models/User");
@@ -55,7 +58,9 @@ app.use(passport.session());
 const mongoose = require("mongoose");
 const passportLocalMongoose = require("passport-local-mongoose");
 
-mongoose.connect("mongodb://localhost/egrocery", {
+const mongo_uri = process.env.MONGODB_URI;
+
+mongoose.connect(mongo_uri || "mongodb://localhost/egrocery", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
@@ -66,15 +71,15 @@ passport.use(UserDetails.createStrategy());
 passport.serializeUser(UserDetails.serializeUser());
 passport.deserializeUser(UserDetails.deserializeUser());
 
-//let data = require("./catalog.json");
+// let data = require("./catalog.json");
 
-//data.forEach((product) => {
-//Products.create(product, (err, product) => {
-//if (err) {
-//console.log(err);
-//}
-//});
-//});
+// data.forEach((product) => {
+//   Products.create(product, (err, product) => {
+//     if (err) {
+//       console.log(err);
+//     }
+//   });
+// });
 
 // PORTS
 let port = process.env.PORT || 3000;

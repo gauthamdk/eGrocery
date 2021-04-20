@@ -18,7 +18,7 @@ router.post("/", (req, res) => {
       console.log(err);
     }
     passport.authenticate("local")(req, res, () => {
-      res.flash("success", "Welcome to eGrocery");
+      req.flash("success", "Welcome to eGrocery");
       res.redirect("/catalog");
     });
   });

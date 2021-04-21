@@ -24,12 +24,9 @@ router.post("/", connectEnsureLogin.ensureLoggedIn(), (req, res) => {
       res.redirect("/catalog");
     } else {
       req.flash("success", "Added product to catalog");
-      console.log("product added");
       res.redirect("/catalog");
     }
   });
-
-  res.redirect("/catalog");
 });
 
 module.exports = router;

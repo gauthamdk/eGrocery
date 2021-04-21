@@ -24,7 +24,7 @@ router.post("/", (req, res, next) => {
         if (err) {
           return next(err);
         } else {
-          req.flash("success", "Welcome back " + user.username);
+          req.flash("success", "Welcome back " + user.name);
           return res.redirect("/catalog");
         }
       });

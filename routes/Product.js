@@ -2,13 +2,14 @@ let express = require("express");
 const Product = require("../models/Product");
 let router = express.Router();
 let Products = require("../models/Product");
+let moment = require("moment");
 
 router.get("/:id", (req, res) => {
   Products.findById(req.params.id).exec((err, product) => {
     if (err) {
       console.log(err);
     } else {
-      res.render("product", { product: product });
+      res.render("product", { product: product, moment: moment });
     }
   });
 });

@@ -3,7 +3,8 @@ let express = require("express"),
   cookieParser = require("cookie-parser"),
   connectEnsureLogin = require("connect-ensure-login"),
   methodOverride = require("method-override"),
-  dotenv = require("dotenv");
+  dotenv = require("dotenv"),
+  moment = require("moment");
 
 const app = express();
 app.use(methodOverride("_method"));

@@ -12,8 +12,7 @@
 
     <div class="row no-margin align-items-center justify-content-around">
       <div class="card col-6 mb-1">
-        <img src= "<%= product.image_url %> "
-        class="card-img-top" alt="...">
+        <img src="<%= product.image_url %> " class="card-img-top" alt="..." />
       </div>
       <div class="col-5">
         <!-- Product name -->
@@ -22,7 +21,12 @@
         <ul>
           <!-- Product details -->
           <li class="list"><strong><%= product.details %> </strong></li>
-          <li class="list"><strong>Best by: <%= product.expiry %></strong></li>
+          <li class="list">
+            <strong
+              >Best by: <%= moment(product.expiry_date).format("MM/DD/YYYY")
+              %></strong
+            >
+          </li>
           <li class="list">
             <strong>Amount available: </strong><%= product.stock %>
           </li>

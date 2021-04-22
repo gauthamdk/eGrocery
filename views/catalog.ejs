@@ -29,7 +29,7 @@
         />
         <div class="card-body">
           <h5 class="card-title">Breakfast & Cereal</h5>
-          <a href="/catalog/Breakfast & Cereal" class="btn shopcat btn-y"
+          <a href="/catalog/Breakfast & Cereal" class="btn shopcat btn-b"
             >Shop</a
           >
         </div>
@@ -43,7 +43,7 @@
         <div class="card-body">
           <h5 class="card-title">Bread & Bakery</h5>
 
-          <a href="/catalog/Bread & Bakery" class="btn shopcat btn-y">Shop</a>
+          <a href="/catalog/Bread & Bakery" class="btn shopcat btn-b">Shop</a>
         </div>
       </div>
       <div class="card col-lg-3 col-sm-6 mb-1">
@@ -55,7 +55,7 @@
         <div class="card-body">
           <h5 class="card-title">Diary, Eggs & Cheese</h5>
 
-          <a href="/catalog/Diary, Eggs & Cheese" class="btn shopcat btn-y"
+          <a href="/catalog/Diary, Eggs & Cheese" class="btn shopcat btn-b"
             >Shop</a
           >
         </div>
@@ -69,7 +69,7 @@
         <div class="card-body">
           <h5 class="card-title">Fruits & Vegetables</h5>
 
-          <a href="/catalog/Fruits & Vegetables" class="btn shopcat btn-y"
+          <a href="/catalog/Fruits & Vegetables" class="btn shopcat btn-b"
             >Shop</a
           >
         </div>
@@ -84,17 +84,19 @@
     <div class="row">
       <% products.forEach(product => { %>
 
-      <div class="card col-lg-4 col-sm-6 mb-5">
+      <div class="card col-lg-4 col-sm-6 mb-5 product-card">
         <img src="<%= product.image_url%>" class="card-img-top product-img" />
         <div class="card-body">
           <h5 class="card-title"><%= product.name%></h5>
-          <a href="/catalog/product/<%= product._id%>" class="btn"
-            >Add to Cart</a
-          >
+          <p><%= product.price %> AED</p>
+          <a href="/catalog/product/<%= product._id%>" class="btn btn-y">
+            Add to Cart 
+            <i class="bi bi-plus"></i>
+          </a>
           <% if(currentUser && currentUser.admin){%>
           <a href="/catalog/editproduct/<%= product._id%>" class="btn"
-            >Edit product</a
-          >
+            >Edit product
+          </a>
           <% } %>
         </div>
       </div>

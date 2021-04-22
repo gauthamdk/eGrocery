@@ -157,6 +157,11 @@ a:hover {
   max-width: 120px;
 }
 
+.card-img-top {
+  max-width: 95%;
+  margin: auto;
+}
+
 #to-catalog {
   padding: 15px;
   font-size: 20px;

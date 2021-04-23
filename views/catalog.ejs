@@ -91,10 +91,9 @@
           <p><%= product.price %> AED</p>
           <a href="/catalog/product/<%= product._id%>" class="btn btn-y">
             Add to Cart 
-            <i class="bi bi-plus"></i>
           </a>
           <% if(currentUser && currentUser.admin){%>
-          <a href="/catalog/editproduct/<%= product._id%>" class="btn"
+          <a href="/catalog/editproduct/<%= product._id%>" class="btn btn-g"
             >Edit product
           </a>
           <% } %>

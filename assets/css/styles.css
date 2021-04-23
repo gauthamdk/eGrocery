@@ -11,14 +11,16 @@ html {
 
 html,
 body {
+  min-height: calc(100vh - 390px);
   height: 100%;
   margin: 0;
   padding: 0;
   font-family: helvetica;
+  overflow: scroll;
 }
 
 body {
-  /*color: white;*/
+  color: black;
   height: 100%;
   overflow: auto;
   overflow-x: hidden;
@@ -173,6 +175,7 @@ a:hover {
 
 #nav {
   background: #121212;
+  height: 60px;
 }
 
 #logo {
@@ -181,7 +184,6 @@ a:hover {
 
 #bg-img-market {
   background-image: url(../imgs/market-background.jpg);
-  /*background-repeat: no-repeat;*/
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -221,15 +223,15 @@ a:hover {
 }
 
 #profile_icon {
-	font-size: 1.8rem;
+  font-size: 1.8rem;
 }
 
 #user-drop {
-	line-height: 0;
+  line-height: 0;
 }
 
 #user-drop * {
-	line-height: 1.5;
+  line-height: 1.5;
 }
 
 #ap_icon {

@@ -115,7 +115,7 @@ router.put(
               $inc: { stock: -1 * req.body.quantity },
             });
 
-            req.flash("success", `Added ${product.name} to cart`);
+            req.flash("success", `Added to cart`);
             res.redirect("/cart");
           }
         }

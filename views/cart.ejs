@@ -20,9 +20,9 @@
     </thead>
 
     <tbody>
-      <% cart.forEach(item =>{ %>
+      <% let i = 1 %> <% cart.forEach(item =>{ %>
       <tr>
-        <th scope="row">1</th>
+        <th scope="row"><%= i%></th>
         <td>
           <img class="cart-image" src="<%= item.image%>" />
         </td>
@@ -46,7 +46,7 @@
           </form>
         </td>
       </tr>
-      <% }) %>
+      <% i++ %> <% }) %>
     </tbody>
   </table>
   <div class="pt-3">
@@ -60,19 +60,18 @@
 </section>
 
 <script>
-  let costs = document.getElementsByClassName("cost_per_product")
+  let costs = document.getElementsByClassName("cost_per_product");
 
-  let total_cost = 0
+  let total_cost = 0;
 
-  for (let product of costs){
-    total_cost += parseFloat(product.innerText)
-  };
+  for (let product of costs) {
+    total_cost += parseFloat(product.innerText);
+  }
 
-  document.getElementById("total").innerText = total_cost
+  document.getElementById("total").innerText = total_cost;
 
   document.getElementById("catalog").classList.add("active");
   document.getElementsByTagName("body")[0].id = "bg-img-market";
 </script>
-
 
 <%-include("./partials/footer") %>

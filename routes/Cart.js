@@ -109,8 +109,6 @@ router.put(
         }
       );
     }
-
-    res.redirect("/cart");
   }
 );
 
@@ -131,7 +129,7 @@ router.put(
         } else {
           console.log("Removed from cart");
 
-          req.flash("success", `Removed ${product.name} from cart`);
+          req.flash("success", "Removed from cart");
           res.redirect("/cart");
         }
       }

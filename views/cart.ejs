@@ -37,7 +37,7 @@
             <i class="bi bi-plus"></i>
           </a>
         </td>
-        <td>13443</td>
+        <td class="cost_per_product"><%= item.count * item.price %></td>
         <td>
           <form action="/cart/<%= item.id %>/remove?_method=PUT" method="POST">
             <button type="submit" class="btn btn-danger">
@@ -60,8 +60,19 @@
 </section>
 
 <script>
+  let costs = document.getElementsByClassName("cost_per_product")
+
+  let total_cost = 0
+
+  for (let product of costs){
+    total_cost += parseFloat(product.innerText)
+  };
+
+  document.getElementById("total").innerText = total_cost
+
   document.getElementById("catalog").classList.add("active");
   document.getElementsByTagName("body")[0].id = "bg-img-market";
 </script>
 
-<%- include("./partials/footer") %>
+
+<%-include("./partials/footer") %>

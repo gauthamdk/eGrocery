@@ -51,14 +51,17 @@ router.put(
           User.updateOne(
             { _id: req.user._id, "cart.product_id": ObjectID(id) },
             { $inc: { "cart.$.count": req.body.quantity } },
-            (err, updated) => {
+            async (err, updated) => {
               if (err) {
                 console.log(err);
                 req.flash("error", "Error adding product to cart");
                 res.redirect("/catalog");
               } else {
                 console.log("updated");
-                req.flash("success", `Added ${product.name} to cart`);
+                await Product.findByIdAndUpdate(product, {
+                  $inc: { stock: -1 * req.body.quantity },
+                });
+                req.flash("success", `Added to cart`);
                 res.redirect("/cart");
               }
             }
@@ -72,14 +75,18 @@ router.put(
           {
             $push: { cart: { product_id: product, count: req.body.quantity } },
           },
-          (err, docs) => {
+          async (err, docs) => {
             if (err) {
               console.log(err);
               req.flash("error", "Error adding product to cart");
               res.redirect("/catalog");
             } else {
+              console.log(docs);
               console.log("Added to cart");
-              req.flash("success", `Added ${product.name} to cart`);
+              await Product.findByIdAndUpdate(product, {
+                $inc: { stock: -1 * req.body.quantity },
+              });
+              req.flash("success", `Added to cart`);
               res.redirect("/cart");
             }
           }
@@ -96,13 +103,18 @@ router.put(
             },
           ],
         },
-        (err, docs) => {
+        async (err, docs) => {
           if (err) {
             console.log(err);
             req.flash("error", "Error adding product to cart");
             res.redirect("/catalog");
           } else {
             console.log("Added to cart");
+
+            await Product.findByIdAndUpdate(product, {
+              $inc: { stock: -1 * req.body.quantity },
+            });
+
             req.flash("success", `Added ${product.name} to cart`);
             res.redirect("/cart");
           }

@@ -21,59 +21,66 @@
   <section class="container my-5">
     <h3>Categories</h3>
     <div class="row">
-      <div class="card col-lg-3 col-sm-6 mb-1">
-        <img
-          src="https://wallpaperaccess.com/full/3471160.jpg"
-          class="card-img-top"
-          alt="..."
-        />
-        <div class="card-body">
-          <h5 class="card-title">Breakfast & Cereal</h5>
-          <a href="/catalog/Breakfast & Cereal" class="btn shopcat btn-b"
-            >Shop</a
-          >
+      <div class="col-lg-3 col-sm-6">
+        <div class="card mb-1">
+          <img
+            src="https://wallpaperaccess.com/full/3471160.jpg"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title">Breakfast & Cereal</h5>
+            <a href="/catalog/Breakfast & Cereal" class="btn shopcat btn-b"
+              >Shop</a
+            >
+          </div>
         </div>
       </div>
-      <div class="card col-lg-3 col-sm-6 mb-1">
-        <img
-          src="../assets/categories/bread.jpeg"
-          class="card-img-top"
-          alt="..."
-        />
-        <div class="card-body">
-          <h5 class="card-title">Bread & Bakery</h5>
+      <div class="col-lg-3 col-sm-6">
+        <div class="card mb-1">
+          <img
+            src="../assets/categories/bread.jpeg"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title">Bread & Bakery</h5>
 
-          <a href="/catalog/Bread & Bakery" class="btn shopcat btn-b">Shop</a>
+            <a href="/catalog/Bread & Bakery" class="btn shopcat btn-b">Shop</a>
+          </div>
         </div>
       </div>
-      <div class="card col-lg-3 col-sm-6 mb-1">
-        <img
-          src="../assets/categories/egg.jpg"
-          class="card-img-top"
-          alt="..."
-        />
-        <div class="card-body">
-          <h5 class="card-title">Diary, Eggs & Cheese</h5>
+      <div class="col-lg-3 col-sm-6">
+        <div class="card mb-1">
+          <img
+            src="../assets/categories/egg.jpg"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title">Diary, Eggs & Cheese</h5>
 
-          <a href="/catalog/Diary, Eggs & Cheese" class="btn shopcat btn-b"
-            >Shop</a
-          >
+            <a href="/catalog/Diary, Eggs & Cheese" class="btn shopcat btn-b"
+              >Shop</a
+            >
+          </div>
         </div>
       </div>
-      <div class="card col-lg-3 col-sm-6 mb-1">
-        <img
-          src="https://i.pinimg.com/originals/31/7b/72/317b72fe0ebc551d0cad86e3f2ce6495.jpg"
-          class="card-img-top"
-          alt="..."
-        />
-        <div class="card-body">
-          <h5 class="card-title">Fruits & Vegetables</h5>
+<div class="col-lg-3 col-sm-6">
+        <div class="card mb-1">
+          <img
+            src="https://i.pinimg.com/originals/31/7b/72/317b72fe0ebc551d0cad86e3f2ce6495.jpg"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title">Fruits & Vegetables</h5>
 
-          <a href="/catalog/Fruits & Vegetables" class="btn shopcat btn-b"
-            >Shop</a
-          >
+            <a href="/catalog/Fruits & Vegetables" class="btn shopcat btn-b"
+              >Shop</a
+            >
+          </div>
         </div>
-      </div>
     </div>
   </section>
 
@@ -84,7 +91,7 @@
     <div class="row">
       <% products.forEach(product => { %>
 
-      <div class="card col-lg-4 col-sm-6 mb-5 product-card">
+      <div class="no-border card col-lg-4 col-sm-6 mb-5 product-card">
         <img src="<%= product.image_url%>" class="card-img-top product-img" />
         <div class="card-body">
           <h5 class="card-title"><%= product.name%></h5>

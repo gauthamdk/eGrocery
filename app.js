@@ -10,7 +10,6 @@ let express = require("express"),
 const app = express();
 app.use(methodOverride("_method"));
 
-console.log(__dirname);
 app.use(favicon(__dirname + "/assets/favicon.ico"));
 
 dotenv.config();

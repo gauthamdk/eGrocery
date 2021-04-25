@@ -4,10 +4,14 @@ let express = require("express"),
   connectEnsureLogin = require("connect-ensure-login"),
   methodOverride = require("method-override"),
   dotenv = require("dotenv"),
-  moment = require("moment");
+  moment = require("moment"),
+  favicon = require("serve-favicon");
 
 const app = express();
 app.use(methodOverride("_method"));
+
+console.log(__dirname);
+app.use(favicon(__dirname + "/assets/favicon.ico"));
 
 dotenv.config();
 

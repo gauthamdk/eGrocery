@@ -11,10 +11,8 @@
     </div>
 
     <div class="row no-margin align-items-center justify-content-around">
-      <div class="card col-6 mb-1">
-        <img src="<%= product.image_url %> " class="card-img-top" alt="..." />
-      </div>
-      <div class="col-5">
+      <img src="<%= product.image_url %> " class="col-lg-4 col-md-6 my-1" alt="..." />
+      <div class="col-lg-7 col-md-6">
         <!-- Product name -->
         <h4 class="mt-4"><%= product.name%></h4>
 
@@ -50,7 +48,7 @@
                   />
                 </div>
               </div>
-              <button class="btn btn-y shopcat" type="submit">
+              <button class="btn btn-y shopcat mt-3" type="submit">
                 <i class="bi bi-cart-plus"></i> Add to cart!
               </button>
             </form>
@@ -65,11 +63,5 @@
   document.getElementById("catalog").classList.add("active");
   document.getElementsByTagName("body")[0].id = "bg-img-market";
 </script>
-<script
-  type="text/javascript"
-  async
-  defer
-  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDxu_A7z9KvwfUMK3J9xUuLdhgU_8PCMPE&callback=initMap"
-></script>
 
 <%- include("./partials/footer") %>

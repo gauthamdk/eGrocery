@@ -81,7 +81,6 @@ router.put(
               req.flash("error", "Error adding product to cart");
               res.redirect("/catalog");
             } else {
-              console.log(docs);
               console.log("Added to cart");
               await Product.findByIdAndUpdate(product, {
                 $inc: { stock: -1 * req.body.quantity },

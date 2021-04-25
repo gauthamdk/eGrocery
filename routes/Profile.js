@@ -10,14 +10,14 @@ let ObjectID = require("mongodb").ObjectID;
 //   res.render("userprofile");
 // });
 
-router.get("/", connectEnsureLogin.ensureLoggedIn(),(req, res) => {
-  User.findById(req.user._id, async (err, user) => {
-    const name = user.name;
-    const email = user.email;
-    const phone_no = user.phone_no;
-    const address = user.address;
-    const payment_method = user.payment_method;
-    res.render("userprofile");
+router.get("/:userid", connectEnsureLogin.ensureLoggedIn(),(req, res) => {
+  User.findById(req.params.userid, async (err, user) => {
+    // const name = user.name;
+    // const email = user.email;
+    // const phone_no = user.phone_no;
+    // const address = user.address;
+    // const payment_method = user.payment_method;
+    res.render("userprofile", {user: user});
   });
 });
 

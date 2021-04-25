@@ -1,6 +1,11 @@
+footer {
+  flex-shrink: 0;
+}
+
 footer .main-footer {
   padding: 20px 0;
   background: #252525;
+  margin-top: auto;
 }
 footer ul {
   padding-left: 0;

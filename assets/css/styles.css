@@ -1,7 +1,7 @@
-html {
-  overflow: hidden;
+/* html {
+  overflow: scroll;
   height: 100%;
-}
+} */
 
 ::-webkit-scrollbar {
   width: 0px;
@@ -9,24 +9,25 @@ html {
   /* make scrollbar transparent */
 }
 
+main {
+  flex: 1 0 auto;
+}
+
 html,
 body {
-  min-height: calc(100vh - 390px);
   height: 100%;
   margin: 0;
   padding: 0;
   font-family: helvetica;
-  overflow: scroll;
+  /* overflow: scroll; */
 }
 
 body {
   color: black;
-  height: 100%;
-  overflow: auto;
   overflow-x: hidden;
-  padding-bottom: 25px;
-  padding-top: 15px;
   width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 p {
@@ -157,6 +158,9 @@ a:hover {
 .cart-image {
   max-height: 120px;
   max-width: 120px;
+}
+.shopcat {
+  margin-top: 10px;
 }
 
 #to-catalog {

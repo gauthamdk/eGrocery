@@ -2046,7 +2046,7 @@ p {
       <div class="container-fluid d-flex align-items-center">
         <div class="row">
           <div class="col-lg-7 col-md-10">
-            <h1 class="display-2 text-white">Hello there!</h1>
+            <h1 class="display-2 text-white">Hello there, <%= user.name%>!</h1>
             <p class="text-white mt-0 mb-5">This is your profile page. You can update your personal information and view your order history. Remember that we only deliver in Abu Dhabi, UAE. <br> Happy Grocery Shopping!</p>
 
           </div>
@@ -2101,25 +2101,29 @@ p {
                   <h3 class="mb-0">My account</h3>
                 </div>
                 <div class="col-4 text-right">
-                  <a href="#!" class="btn btn-sm btn-primary">Edit Profile</a>
+                  <button id="edit" onclick="myFunction()" class="btn btn-sm btn-primary">Edit Profile</button>
+                  <button id="save" onclick="myFunctionSave()" class="btn btn-sm btn-primary">Save</button>
+
                 </div>
               </div>
             </div>
             <div class="card-body">
-              <form>
+              <form
+              method="POST"
+              >
                 <h6 class="heading-small text-muted mb-4">User information</h6>
                 <div class="pl-lg-4">
                   <div class="row">
                     <div class="col-lg-6">
                       <div class="form-group focused">
                         <label class="form-control-label" for="input-username">Telefone</label>
-                        <input type="text" id="input-username" class="form-control form-control-alternative" value= <%= user.phone_no%> >
+                        <input type="text" id="input-username" class="form-control form-control-alternative" disabled="disabled" value= <%= user.phone_no%> >
                       </div>
                     </div>
                     <div class="col-lg-6">
                       <div class="form-group">
                         <label class="form-control-label" for="input-email">Email address</label>
-                        <input type="email" id="input-email" class="form-control form-control-alternative" value= <%= user.email%> >
+                        <input type="email" id="input-email" class="form-control form-control-alternative" disabled="disabled" value= <%= user.email%> >
                       </div>
                     </div>
                   </div>
@@ -2127,7 +2131,7 @@ p {
                     <div class="col-lg-6">
                       <div class="form-group focused">
                         <label class="form-control-label" for="input-first-name">Name</label>
-                        <input type="text" id="input-first-name" class="form-control form-control-alternative" value= <%= user.name%> >
+                        <input type="text" id="input-first-name" class="form-control form-control-alternative" disabled="disabled" value= <%= user.name%> >
                       </div>
                     </div>
                   </div>
@@ -2140,7 +2144,7 @@ p {
                     <div class="col-md-12">
                       <div class="form-group focused">
                         <label class="form-control-label" for="input-address">Address</label>
-                        <input id="input-address" class="form-control form-control-alternative" value= <%= user.address%> >
+                        <input id="input-address" class="form-control form-control-alternative" disabled="disabled" value= <%= user.address%> >
                       </div>
                     </div>
                   </div>
@@ -2148,13 +2152,13 @@ p {
                     <div class="col-lg-4">
                       <div class="form-group focused">
                         <label class="form-control-label" for="input-city">City</label>
-                        <input type="text" id="input-city" class="form-control form-control-alternative" value="Abu Dhabi">
+                        <input type="text" id="input-city" class="form-control form-control-alternative" value="Abu Dhabi" disabled="disabled">
                       </div>
                     </div>
                     <div class="col-lg-4">
                       <div class="form-group focused">
                         <label class="form-control-label" for="input-country">Country</label>
-                        <input type="text" id="input-country" class="form-control form-control-alternative" value="UAE">
+                        <input type="text" id="input-country" class="form-control form-control-alternative" value="UAE" disabled="disabled">
                       </div>
                     </div>
 
@@ -2166,7 +2170,7 @@ p {
                 <div class="pl-lg-4">
                   <div class="form-group focused">
                     <label>Payment Method</label>
-                    <input type="text" id="input-country" class="form-control form-control-alternative" value= <%= user.payment_method%> >
+                    <input type="text" id="input-pay" class="form-control form-control-alternative" disabled="disabled" value= <%= user.payment_method%> >
                   </div>
                 </div>
               </form>
@@ -2178,4 +2182,31 @@ p {
   </div>
 </body>
 </html>
+
+
 <%- include("./partials/footer") %>
+
+<script>
+
+
+function myFunction() {
+  document.getElementById("input-email").disabled = false;
+  document.getElementById("input-username").disabled = false;
+  document.getElementById("input-first-name").disabled = false;
+  document.getElementById("input-pay").disabled = false;
+  document.getElementById("input-address").disabled = false;
+  document.getElementById("save").style.display = "block";
+}
+
+function myFunctionSave() {
+  document.getElementById("input-email").disabled = true;
+  document.getElementById("input-username").disabled = true;
+  document.getElementById("input-first-name").disabled = true;
+  document.getElementById("input-pay").disabled = true;
+  document.getElementById("input-address").disabled = true;
+  document.getElementById("save").style.display = "none";
+}
+
+document.getElementById("save").style.display = "none";
+
+</script>

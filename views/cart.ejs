@@ -29,11 +29,11 @@
         <td><%= item.name %></td>
         <td><%= item.price %></td>
         <td class="cart-qty">
-          <a href="#" class="btn btn-y">
+          <a href="#" class="btn btn-y" onclick="return dec_cart()">
             <i class="bi bi-dash"></i>
           </a>
-          <span class="px-2"><%= item.count %></span>
-          <a href="#" class="btn btn-y">
+          <span class="px-2" id="qty-in-cart"><%= item.count %></span>
+          <a href="#" class="btn btn-y" onclick="return inc_cart()">
             <i class="bi bi-plus"></i>
           </a>
         </td>
@@ -61,14 +61,32 @@
 
   let total_cost = 0;
 
-  for (let product of costs) {
-    total_cost += parseFloat(product.innerText);
-  }
+  function calculate_cost() {
+    for (let product of costs) {
+      total_cost += parseFloat(product.innerText);
+    }
 
-  document.getElementById("total").innerText = total_cost;
+    document.getElementById("total").innerText = total_cost;
+  }
+  calculate_cost();
 
   document.getElementById("catalog").classList.add("active");
   document.getElementsByTagName("body")[0].id = "bg-img-market";
+
+  function inc_cart() {
+    let value = document.getElementById("qty-in-cart").innerText;
+    value = parseInt(value);
+    value++;
+    document.getElementById("qty-in-cart").innerText = value;
+  }
+
+  function dec_cart() {
+    let value = document.getElementById("qty-in-cart").innerText;
+    value = parseInt(value);
+    value = value - 1;
+    value = value < 0 ? 0 : value;
+    document.getElementById("qty-in-cart").innerText = value;
+  }
 </script>
 
 <%-include("./partials/footer") %>

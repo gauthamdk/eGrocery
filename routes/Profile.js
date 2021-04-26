@@ -5,44 +5,33 @@ const User = require("../models/User");
 const Product = require("../models/Product");
 const passport = require("passport");
 let ObjectID = require("mongodb").ObjectID;
+const { update } = require("../models/User");
 
-// router.get("/", (req, res) => {
-//   res.render("userprofile");
-// });
-
-router.get("/:userid", connectEnsureLogin.ensureLoggedIn(),(req, res) => {
+router.get("/:userid", connectEnsureLogin.ensureLoggedIn(), (req, res) => {
   User.findById(req.params.userid, async (err, user) => {
-    // const name = user.name;
-    // const email = user.email;
-    // const phone_no = user.phone_no;
-    // const address = user.address;
-    // const payment_method = user.payment_method;
-    res.render("userprofile", {user: user});
+    res.render("userprofile", { user: user });
   });
 });
 
-router.put("/", connectEnsureLogin.ensureLoggedIn(), (req, res) => {
+router.put("/:userid", connectEnsureLogin.ensureLoggedIn(), (req, res) => {
+  console.log(req.body);
   const newdetails = {
     name: req.body.name,
     email: req.body.email,
-    phone_no: req.body.phone_no,
+    phone_no: req.body.phone,
     address: req.body.address,
-    payment_method: req.body.payment_method,
+    payment_method: req.body.payment,
   };
 
-  User.findByIdAndUpdate(
-    newdetails,
-    (err, updatedDetails) => {
-      if (err) {
-        req.flash("error", "Error updating profile");
-        res.redirect("/profile");
-      } else {
-        req.flash("success", "Saved details");
-        res.redirect("/profile" + updatedDetails._id);
-      }
+  User.findByIdAndUpdate(req.params.userid, newdetails, (err, updatedUser) => {
+    if (err) {
+      console.log(err);
+    } else {
+      req.flash("success", "Saved details");
+      console.log("Saved details");
+      res.redirect("/profile/" + updatedUser._id);
     }
-  );
+  });
 });
-
 
 module.exports = router;

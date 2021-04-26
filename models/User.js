@@ -6,7 +6,7 @@ const UserDetail = new mongoose.Schema({
   username: String,
   password: String,
   email: String,
-  phone_no: Number,
+  phone_no: String,
   address: String,
   payment_method: String,
   cart: [

@@ -96,11 +96,13 @@
         <div class="card-body">
           <h5 class="card-title"><%= product.name%></h5>
           <p><%= product.price %> AED</p>
+          <% if(currentUser && !currentUser.admin){%>
           <a href="/catalog/product/<%= product._id%>" class="btn btn-y">
             Add to Cart 
             <i class="bi bi-plus"></i> 
           </a>
-          <% if(currentUser && currentUser.admin){%>
+           
+          <%} else if(currentUser && currentUser.admin){%>
           <a href="/catalog/editproduct/<%= product._id%>" class="btn btn-g"
             >Edit product
           </a>

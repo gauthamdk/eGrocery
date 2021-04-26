@@ -2102,15 +2102,17 @@ p {
                 </div>
                 <div class="col-4 text-right">
                   <button id="edit" onclick="myFunction()" class="btn btn-sm btn-primary">Edit Profile</button>
-                  <button id="save" onclick="myFunctionSave()" class="btn btn-sm btn-primary">Save</button>
 
                 </div>
               </div>
             </div>
             <div class="card-body">
+
               <form
               method="POST"
+              action="/profile/<%=currentUser._id%>?_method=PUT"
               >
+
                 <h6 class="heading-small text-muted mb-4">User information</h6>
                 <div class="pl-lg-4">
                   <div class="row">
@@ -2173,6 +2175,7 @@ p {
                     <input type="text" id="input-pay" class="form-control form-control-alternative" disabled="disabled" value= <%= user.payment_method%> >
                   </div>
                 </div>
+                  <button id="save" type="submit" onsubmit="myFunctionSave()" class="btn btn-sm btn-primary">Save</button>
               </form>
             </div>
           </div>

@@ -21,7 +21,7 @@ router.get("/:userid", connectEnsureLogin.ensureLoggedIn(),(req, res) => {
   });
 });
 
-router.put("/", connectEnsureLogin.ensureLoggedIn(), (req, res) => {
+router.put("/:userid", connectEnsureLogin.ensureLoggedIn(), (req, res) => {
   const newdetails = {
     name: req.body.name,
     email: req.body.email,
@@ -31,14 +31,15 @@ router.put("/", connectEnsureLogin.ensureLoggedIn(), (req, res) => {
   };
 
   User.findByIdAndUpdate(
+    req.params.userid,
     newdetails,
-    (err, updatedDetails) => {
+    (err, updatedUser) => {
       if (err) {
-        req.flash("error", "Error updating profile");
-        res.redirect("/profile");
+        console.log(err);
       } else {
-        req.flash("success", "Saved details");
-        res.redirect("/profile" + updatedDetails._id);
+        //req.flash("success", "Saved details");
+        console.log("Saved details");
+
       }
     }
   );

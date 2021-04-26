@@ -8,6 +8,7 @@
     <h1 class="title display-1 txt-white">eGrocery</h1>
     <h3 class="txt-yellow caps mb-4"><strong>groceries made easy</strong></h3>
 
+    <% if(!currentUser) {%>
     <!-- registe / log in -->
     <a
       href="#"
@@ -21,6 +22,8 @@
       onclick="window.location.href='/login'"
       >Login <i class="bi bi-person-plus-fill"></i
     ></a>
+
+    <% } %>
   </div>
 </div>
 
@@ -42,7 +45,9 @@
         />
         <div class="card-body">
           <h5 class="card-title">Breakfast & Cereal</h5>
-          <a href="#" class="btn btn-y shopcat">Shop</a>
+          <a href="/catalog/Breakfast & Cereal" class="btn btn-y shopcat"
+            >Shop</a
+          >
         </div>
       </div>
     </div>
@@ -55,7 +60,7 @@
         />
         <div class="card-body">
           <h5 class="card-title">Bread & Bakery</h5>
-          <a href="#" class="btn btn-y shopcat">Shop</a>
+          <a href="/catalog/Bread & Bakery" class="btn btn-y shopcat">Shop</a>
         </div>
       </div>
     </div>
@@ -69,7 +74,9 @@
         <div class="card-body">
           <h5 class="card-title">Diary, Eggs & Cheese</h5>
 
-          <a href="#" class="btn btn-y shopcat">Shop</a>
+          <a href="/catalog/Diary, Eggs & Cheese" class="btn btn-y shopcat"
+            >Shop</a
+          >
         </div>
       </div>
     </div>
@@ -83,7 +90,9 @@
         <div class="card-body">
           <h5 class="card-title">Fruits & Vegetables</h5>
 
-          <a href="#" class="btn btn-y shopcat">Shop</a>
+          <a href="/catalog/Fruits & Vegetables" class="btn btn-y shopcat"
+            >Shop</a
+          >
         </div>
       </div>
     </div>

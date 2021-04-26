@@ -1,98 +1,136 @@
+<%- include("./partials/header") %>
 
- <%- include("./partials/header") %> 
+<!-- Header section -->
+<div class="container-fluid" id="bg-img-strw">
+  <div
+    class="container d-flex flex-column justify-content-center full-height pb-5"
+  >
+    <h1 class="title display-1 txt-white">eGrocery</h1>
+    <h3 class="txt-yellow caps mb-4"><strong>groceries made easy</strong></h3>
 
-  <!-- Header section -->
-  <div class="container-fluid" id="bg-img-strw">
-    <div class="container d-flex flex-column justify-content-center full-height pb-5">  
-      <h1 class="title display-1 txt-white">eGrocery</h1>
-      <h3 class="txt-yellow caps mb-4"><strong>groceries made easy</strong></h3> 
+    <!-- registe / log in -->
+    <a
+      href="#"
+      class="btn btn-y register-btn mb-3"
+      onclick="window.location.href='/register'"
+      >Register <i class="bi bi-person-plus"></i
+    ></a>
+    <a
+      href="#"
+      class="btn btn-g register-btn"
+      onclick="window.location.href='/login'"
+      >Login <i class="bi bi-person-plus-fill"></i
+    ></a>
+  </div>
+</div>
 
-      <!-- registe / log in -->
-      <a href="#" class="btn btn-y register-btn mb-3" onclick="window.location.href='/register'">Register <i class="bi bi-person-plus"></i></a>
-      <a href="#" class="btn btn-g register-btn" onclick="window.location.href='/login'">Login <i class="bi bi-person-plus-fill"></i></a>
+<!-- Catalog section -->
+<section class="container-fluid px-2" id="home_page_bg_shop">
+  <!-- title -->
+  <h2 class="display-2 text-centered txt-blue mb-5 pt-3">
+    <strong>Come Shop with Us!</strong>
+  </h2>
+
+  <!-- cards -->
+  <div class="mx-5 row justify-content-center">
+    <div class="col-md-3 col-sm-6 col-12">
+      <div class="card mb-1 shadow">
+        <img
+          src="https://wallpaperaccess.com/full/3471160.jpg"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">Breakfast & Cereal</h5>
+          <a href="#" class="btn btn-y shopcat">Shop</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 col-sm-6 col-12">
+      <div class="card mb-1 shadow">
+        <img
+          src="../assets/categories/bread.jpeg"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">Bread & Bakery</h5>
+          <a href="#" class="btn btn-y shopcat">Shop</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 col-sm-6 col-12">
+      <div class="card mb-1 shadow">
+        <img
+          src="../assets/categories/egg.jpg"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">Diary, Eggs & Cheese</h5>
+
+          <a href="#" class="btn btn-y shopcat">Shop</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 col-sm-6 col-12">
+      <div class="card mb-1 shadow">
+        <img
+          src="https://i.pinimg.com/originals/31/7b/72/317b72fe0ebc551d0cad86e3f2ce6495.jpg"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">Fruits & Vegetables</h5>
+
+          <a href="#" class="btn btn-y shopcat">Shop</a>
+        </div>
+      </div>
     </div>
   </div>
 
+  <!-- come shop with us -->
+  <div class="container d-flex justify-content-end">
+    <a
+      href="#"
+      id="to-catalog"
+      class="btn mt-3 mb-5 ml-5"
+      onclick="window.location.href='/catalog'"
+      ><strong>View our entire catalog</strong> <i class="bi bi-basket2"></i
+    ></a>
+  </div>
+</section>
 
-  <!-- Catalog section -->
-  <section class="container-fluid px-2">
-    <!-- title -->
-    <h2 class="display-2 text-centered txt-blue mb-5 pt-3"><strong>Come Shop with Us!</strong></h2>
-    
-    <!-- cards -->
-    <div class="mx-5 row justify-content-center">
-      <div class="col-md-3 col-sm-6 col-12">  
-        <div class="card mb-1">
-          <img src="https://wallpaperaccess.com/full/3471160.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Breakfast & Cereal</h5>
-            <a href="#" class="btn btn-y shopcat">Shop</a>
-          </div>
-        </div>
+<!-- About us mini section -->
+<section>
+  <div class="flex-row-reverse row no-margin align-items-between">
+    <img src="../assets/imgs/about2.jpg" class="col-md-6 no-margin" />
+    <div class="col-md-6">
+      <h2 class="display-2 text-centered txt-green caps mb-5 pt-3">About Us</h2>
+      <h3 class="txt-yellow text-centered mb-3"><strong>Who we are</strong></h3>
+      <!-- text content -->
+      <div class="row justify-content-center">
+        <p class="col-md-8">
+          <strong
+            >We are a Saadiyat based grocery store ready to deliver fresh
+            groceries and delicious snacks.</strong
+          >
+        </p>
       </div>
-      <div class="col-md-3 col-sm-6 col-12">
-        <div class="card mb-1">
-          <img src="../assets/categories/bread.jpeg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Bread & Bakery</h5>
-            <a href="#" class="btn btn-y shopcat">Shop</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3 col-sm-6 col-12">
-        <div class="card mb-1">
-          <img src="../assets/categories/egg.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Diary, Eggs & Cheese</h5>
 
-            <a href="#" class="btn btn-y shopcat">Shop</a>
-          </div>
-        </div>
+      <!-- button to about -->
+      <div class="d-flex justify-content-center align-items-center">
+        <a href="/about" class="btn btn-b" id="learn-more"
+          >Learn More <i class="bi bi-three-dots"></i
+        ></a>
       </div>
-      <div class="col-md-3 col-sm-6 col-12">
-        <div class="card mb-1">
-          <img src="https://i.pinimg.com/originals/31/7b/72/317b72fe0ebc551d0cad86e3f2ce6495.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Fruits & Vegetables</h5>
 
-            <a href="#" class="btn btn-y shopcat">Shop</a>
-          </div>
-        </div>
-      </div>
+      <hr />
     </div>
+  </div>
+</section>
+<script type="text/javascript">
+  document.getElementById("home").classList.add("active");
+</script>
 
-    <!-- come shop with us -->
-    <div class="container d-flex justify-content-end">  
-      <a href="#" id="to-catalog" class="btn mt-3 mb-5 ml-5" onclick="window.location.href='/catalog'"><strong>View our entire catalog</strong> <i class="bi bi-basket2"></i></a>
-    </div>
-
-
-  </section>
-
-  <!-- About us mini section -->
-  <section id="bg-img-market">
-    <div class="flex-row-reverse row no-margin align-items-between">
-      <img src="../assets/imgs/about2.jpg" class="col-md-6 no-margin">
-      <div class="col-md-6" id="background-elem">  
-        <h2 class="display-2 text-centered txt-green caps mb-5 pt-3">About Us</h2>
-        <h3 class="txt-yellow text-centered mb-3"><strong>Who we are</strong></h3>
-        <!-- text content -->
-        <div class="row justify-content-center">  
-          <p class="col-md-8"><strong>We are a Saadiyat based grocery store ready to deliver fresh groceries and delicious snacks.</strong></p>
-        </div>
-
-        <!-- button to about -->
-        <div class="d-flex justify-content-center align-items-center">
-          <a href="/about" class="btn btn-b" id="learn-more">Learn More <i class="bi bi-three-dots"></i></a>
-        </div>
-
-        <hr>
-      </div>
-    </div>
-  </section>
-  <script type="text/javascript">
-    document.getElementById("home").classList.add("active");
-  </script>
-
-  <%- include("./partials/footer") %>
-
+<%- include("./partials/footer") %>

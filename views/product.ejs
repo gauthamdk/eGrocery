@@ -4,18 +4,23 @@
   <!-- subsection (about us, etc)  -->
   <section class="container no-margin py-5">
     <!-- button to go back -->
-    <div class="container ml-5">
+    <div class="container ml-5 mb-3">
       <a href="/catalog" class="btn btn-b right"
         ><i class="bi bi-arrow-left"></i> Back to Catalog</a
       >
     </div>
 
     <div class="row no-margin align-items-center justify-content-around">
-      <img src="<%= product.image_url %> " class="col-lg-4 col-md-6 my-1" alt="..." />
+      <div class="col-lg-4 col-md-6 my-1">
+        <img
+          src="<%= product.image_url %> "
+          class="img-responsive product-view-img shadow-lg"
+          alt="..."
+        />
+      </div>
       <div class="col-lg-7 col-md-6">
         <!-- Product name -->
-        <h4 class="mt-4"><%= product.name%></h4>
-
+        <h3 class="mt-4"><%= product.name%></h3>
         <ul>
           <!-- Product details -->
           <li class="list"><strong><%= product.details %> </strong></li>
@@ -33,7 +38,7 @@
             <form method="POST" action="/cart/<%=product._id%>/add?_method=PUT">
               <div class="form-group row">
                 <label for="qtyInput" class="col-sm-2 col-form-label"
-                  >Quantity:
+                  ><strong>Quantity</strong>:
                 </label>
                 <div class="col-sm-3">
                   <input
@@ -48,11 +53,11 @@
                   />
                 </div>
               </div>
+          </li>
               <button class="btn btn-y shopcat mt-3" type="submit">
                 <i class="bi bi-cart-plus"></i> Add to cart!
               </button>
             </form>
-          </li>
         </ul>
       </div>
     </div>

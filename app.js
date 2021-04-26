@@ -1,11 +1,11 @@
 let express = require("express"),
-  flash = require("connect-flash"),
-  cookieParser = require("cookie-parser"),
-  connectEnsureLogin = require("connect-ensure-login"),
-  methodOverride = require("method-override"),
-  dotenv = require("dotenv"),
-  moment = require("moment"),
-  favicon = require("serve-favicon");
+	flash = require("connect-flash"),
+	cookieParser = require("cookie-parser"),
+	connectEnsureLogin = require("connect-ensure-login"),
+	methodOverride = require("method-override"),
+	dotenv = require("dotenv"),
+	moment = require("moment"),
+	favicon = require("serve-favicon");
 
 const app = express();
 app.use(methodOverride("_method"));
@@ -35,10 +35,10 @@ app.use(express.static(__dirname));
 app.set("view engine", "ejs");
 
 const expressSession = require("express-session")({
-  secret: "justanythingrandom4r8934niurw8jADFD",
-  resave: false,
-  saveUninitialized: false,
-  cookie: { maxAge: 60000 },
+	secret: "justanythingrandom4r8934niurw8jADFD",
+	resave: false,
+	saveUninitialized: false,
+	cookie: { maxAge: 6000000 },
 });
 
 app.use(express.json());
@@ -65,8 +65,8 @@ const passportLocalMongoose = require("passport-local-mongoose");
 const mongo_uri = process.env.MONGODB_URI;
 
 mongoose.connect(mongo_uri || "mongodb://localhost/egrocery", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
+	useNewUrlParser: true,
+	useUnifiedTopology: true,
 });
 
 /* PASSPORT LOCAL AUTHENTICATION */
@@ -94,15 +94,15 @@ app.use("/css", express.static(__dirname + "assets/css"));
 app.use("/imgs", express.static(__dirname + "assets/imgs"));
 
 app.use((req, res, next) => {
-  res.locals.currentUser = req.user;
-  res.locals.currentPage = req.path.split("/")[1];
-  res.locals.error = req.flash("error");
-  res.locals.success = req.flash("success");
-  next();
+	res.locals.currentUser = req.user;
+	res.locals.currentPage = req.path.split("/")[1];
+	res.locals.error = req.flash("error");
+	res.locals.success = req.flash("success");
+	next();
 });
 
 app.get("/", (req, res) => {
-  res.render("home");
+	res.render("home");
 });
 
 app.use("/about", aboutus);
@@ -118,5 +118,5 @@ app.use("/catalog/editproduct", editproduct);
 app.use("/delete", deleteproduct);
 
 app.listen(port, () => {
-  console.log(`App running on port ${port}`);
+	console.log(`App running on port ${port}`);
 });

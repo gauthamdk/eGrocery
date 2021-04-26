@@ -15,9 +15,11 @@
           <div class="widget no-box">
             <h5 class="widget-title">Quick Links<span></span></h5>
             <ul class="thumbnail-widget">
+              <% if (currentUser) { %>
               <li>
-                <div class="thumb-content"><a href="#.">Your Account</a></div>
+                <div class="thumb-content"><a href="/profile/<%= currentUser._id %>">Your Account</a></div>
               </li>
+              <% } %>
               <li>
                 <div class="thumb-content"><a href="#.">Your orders</a></div>
               </li>
@@ -25,7 +27,7 @@
                 <div class="thumb-content"><a href="#.">Help</a></div>
               </li>
               <li>
-                <div class="thumb-content"><a href="#.">About</a></div>
+                <div class="thumb-content"><a href="/about">About</a></div>
               </li>
             </ul>
           </div>

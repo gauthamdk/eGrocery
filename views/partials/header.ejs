@@ -71,7 +71,7 @@
               aria-haspopup="true" aria-expanded="false">
               <i id="profile_icon" class=" bi bi-person-circle"></i>
             </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <div class="dropdown-menu dropdown-menu-start" aria-labelledby="navbarDropdown">
               <p id="account_heading" class="dropdown-item"><%= currentUser.name %></p>
               <a class="dropdown-item" href="/profile/<%= currentUser._id %>">Profile</a>
               <a class="dropdown-item" href="#">Orders</a>
@@ -80,6 +80,16 @@
               <a class="dropdown-item" href="/logout">Sign Out</a>
             </div>
           </li>
+            <% if(!currentUser.admin){ %>
+              <a class="nav-item" href="/cart">
+                <i id='ap_icon' class="bi bi-cart txt-white"></i>
+              </a>
+              <span class='badge badge-warning' id='lblCartCount'>
+                <%= currentUser.cart.length %>
+              </span>
+              </div>
+            <%}%>
+
           <% } %>
 
           <% if (currentUser && currentUser.admin) { %>

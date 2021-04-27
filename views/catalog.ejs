@@ -96,7 +96,7 @@
         <img src="<%= product.image_url%>" class="card-img-top product-img" />
         <div class="card-body">
           <h5 class="card-title"><%= product.name%></h5>
-          <p><%= product.price %> AED</p>
+          <p>AED <%= product.price %></p>
           <% if(currentUser && !currentUser.admin){%>
           <a href="/catalog/product/<%= product._id%>" class="btn btn-y">
             Add to Cart 

@@ -9,7 +9,7 @@ const { update } = require("../models/User");
 
 router.get("/:userid", connectEnsureLogin.ensureLoggedIn(), (req, res) => {
   User.findById(req.params.userid, async (err, user) => {
-    res.render("userprofile", { user: user });
+    res.render("userprofile", { user: user, title: "profile" });
   });
 });
 
